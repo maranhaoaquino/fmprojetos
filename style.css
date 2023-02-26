@@ -1,0 +1,290 @@
+/*
+Nome do Tema: Reste
+URI do tema: http://luketa.me/
+Autor: Lucas Maranhao
+URI do autor: http://luketa.me/
+Descrição: Tema para a FM Projetos e Instalações.
+Versão: 1.0
+Licença: GNU General Public License v2 ou posterior
+URI da licença: http://www.gnu.org/licenses/gpl-2.0.html
+Tags: preto, marrom, laranja, bege, branco, amarelo, claro, uma coluna, duas colunas, barra lateral direita, largura flexível, cabeçalho personalizado, menu personalizado, estilo de editor, imagens em destaque, microformatos, post-formats, rtl-language-support, sticky-post, pronto para tradução
+Domínio de texto: vinte e treze
+
+Este tema, como o WordPress, é licenciado sob a GPL.
+Use-o para fazer algo legal, se divertir e compartilhar o que aprendeu com outras pessoas.
+*/
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: content-box;
+    
+}
+/* HEADER */
+header {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    height: 10rem;
+    align-items: center;
+    opacity: 1rem;
+}
+
+.header-class {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    padding: 0 5rem;
+}
+
+.logo {
+    width: 20rem;
+    height: 2rem;
+    background-color: black;
+
+}
+
+#nav-list {
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+}
+
+#nav-list li {
+    padding: 0 2rem;
+}
+
+#nav-list li:hover {
+    cursor: pointer
+}
+
+/* MAIN */
+
+/* CARROUSEL */
+.carousel {
+    height: 42rem;
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+}
+
+.carousel input {
+    display: none;
+}
+
+.carousel-item {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    
+    transition: all 0.5s ease-in-out;
+}
+
+.carousel-item img{
+    width: 100%;
+}
+
+
+.cover {
+    width: 100%;
+    object-fit: contain;
+}
+
+/* NOSSO PRODUTOS */
+.nossos-produtos {
+    display: flex;
+    width: 100%;
+    
+    flex-direction: column;
+    align-items: center;
+    flex-grow: 1;
+    justify-content: center;
+    align-content: center;
+}
+
+.nossos-produtos h3 {
+    margin: 2rem 0;
+}
+
+.lista-produtos {
+    display: flex;
+    flex-direction: row;
+    padding: 2rem 0;
+    
+    max-width: 100%;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-grow: 1;
+    flex-shrink: 1;
+}
+
+.card {
+    height: 30rem;
+    width: 20rem;
+    margin: 0 1rem;
+    box-shadow: 1px 2px 8px 1px rgb(0, 0, 0);
+    border-radius: 5px;
+    margin: 1rem;
+}
+
+.card-header {
+    height: 60%;
+}
+
+.card-header img {
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+}
+
+.card-body {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem 1rem;
+    box-sizing: border-box;
+
+}
+
+.btn-preco {
+    background-color: #fff;
+    border-radius: 5px;
+    border: 1px solid #000;
+}
+
+.btn-preco:hover {
+    cursor: pointer
+}
+
+.btn-mais-produtos {
+    margin-bottom: 1rem;
+    padding: 1rem;
+    background-color: #000;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    width: 18rem;
+    font-size: 18px
+}
+
+.btn-mais-produtos:hover {
+    cursor: pointer;
+}
+/* NOSSOS PROJETOS */
+.projetos {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    flex-direction: row;
+    width: 100%;
+    align-items: center;
+    align-content: center
+}
+
+/* CONTATO-EMAIL */
+.contato-email {
+    display: flex;
+
+    flex-direction: column;
+    justify-content: center;
+    background-color: #000;
+    color: #fff;
+    width: 100%;
+    align-items: center;
+}
+
+.contato-email form {
+    padding: 1rem 0;
+}
+
+.form-div-a {
+    display: flex;
+    flex-direction: row;
+}
+
+.input-div {
+    margin: 1rem 1rem;
+    padding: 0 1rem;
+}
+
+.input-type-a {
+    border-radius: 5px;
+    width: 14rem;
+    border: none;
+    padding: 1rem;
+    margin-top: 1rem;
+}
+.form-div-b {
+    display: flex;
+    flex-direction: row;
+}
+
+textarea {
+    border-radius: 5px;
+    border: none;
+    padding: 1rem;
+    margin-top: 1rem;
+}
+
+.btn-enviar {
+    margin-bottom: 1rem;
+    padding: 1rem;
+    background-color: #fff;
+    color: #000;
+    border: none;
+    border-radius: 5px;
+    width: 54rem;
+    font-size: 18px
+}
+
+.btn-enviar:hover {
+    cursor: pointer
+}
+/* BTN WHATSAPP */
+.whatsapp {
+    position: fixed;
+    width: 80px;
+    height: 80px;
+    bottom: 16px;
+    right: 2%;
+    box-sizing: content-box;
+    
+}
+
+.whatsapp img {
+    width: 100%;
+    object-fit: cover;
+    height: 100%;
+}
+
+/* FOOTER */
+
+footer {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 12rem;
+    background-color: #fff;
+    color: #000;
+    font-size:x-large;
+}
+
+.footer-div {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    padding: 0 5rem;
+}
+
+.lista-icones {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+}
+
+.lista-icones li {
+    margin: 0 1rem;
+}
+
