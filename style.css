@@ -184,7 +184,6 @@ header {
 /* CONTATO-EMAIL */
 .contato-email {
     display: flex;
-
     flex-direction: column;
     justify-content: center;
     background-color: #000;
@@ -262,10 +261,8 @@ textarea {
 footer {
     width: 100%;
     display: flex;
-    flex-direction: row;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
-    height: 12rem;
     background-color: #fff;
     color: #000;
     font-size:x-large;

@@ -5,44 +5,13 @@
     <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
         <main>
             <!-- CARROSSEL DE IMAGENS -->
-            <div class="carousel">
-                <input type="radio" name="radio-btn" id="">
-                <input type="radio" name="radio-btn" id="">
-                <input type="radio" name="radio-btn" id="">
-                <input type="radio" name="radio-btn" id="">
-                <div class="carousel-item">
-                    <img src="./IMG/04a7ab16b5f88493a9dd3766685e36a8eeee0f64_hq.jpg" alt="" class="cover">
-                </div>
-                <div class="carousel-item">
-                    <img src="./IMG/0ec170f6efd59b57b3f0961b3f8d5590.jpg" alt="" class="cover">
-                </div>
-                <div class="navigation-auto">
-                    <div class="auto-btn"></div>
-                    <div class="auto-btn"></div>
-                </div>
-            </div>
+            
             <!-- PRODUTOS -->
             <div class="nossos-produtos">
                 <h3>Nossos Produtos</h3>
                 <!-- ESPAÇO PARA OS CARD DOS PRODUTOS -->
                 <div class="lista-produtos">
-                    <div class="card">
-                        <div class="card-header">
-                            <img src="./IMG/04a7ab16b5f88493a9dd3766685e36a8eeee0f64_hq.jpg" alt="" height="100%">
-                        </div>
-                        <div class="card-body">
-                            <h5>Titulo 1</h5>
-                            <button class="btn-preco">
-                                Preço Sob Consulta
-                            </button>
-                            <p>
-                                Nullam aliquam nisi eget condimentum vehicula.
-                                Praesent semper imperdiet bibendum.
-                                Suspendisse non ultricies augue.
-                                Integer imperdiet felis quis tempus finibus.                            
-                            </p>
-                        </div>
-                    </div>
+                    <?php include(TEMPLATEPATH . "/inc/card.php"); ?>
                     <div class="card">
                         <div class="card-header">
                             <img src="./IMG/0ec170f6efd59b57b3f0961b3f8d5590.jpg" alt="" height="100%">
@@ -68,7 +37,6 @@
             <!-- PROJETOS -->
             <div class="projetos">
                 <h3>Nossos Projetos</h3>
-                
             </div>       
         </main>
     <?php endwhile; endif; ?>
