@@ -5,7 +5,29 @@
     <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
         <main>
             <!-- CARROSSEL DE IMAGENS -->
-            
+            <?php $slide_principal = get_field_cmb2('slide_principal'); 
+                if(isset($slide_principal)) {
+            ?>
+            <div id="slide-principal" class="owl-carousel owl-theme">
+                <?php foreach($slide_principal as $slide) { ?>
+                    <div class="item">
+                        <a href="<?php echo $slide['link_slide'] ?>">
+                            <img src="<?php echo $slide['img_slide'] ?>">
+                            <h2><?php echo $slide['title_slide'] ?></h2>
+                            <p><?php echo $slide['subtitle_slide'] ?></p>
+                        </a>
+                    </div>
+                <?php } ?>
+            </div>
+            <?php } ?>
+            <script>
+                $('#slide-principal').owlCarousel({
+                    loop:true,
+                    nav:true,
+                    items: 1,
+                    dots: true
+                });
+            </script>
             <!-- PRODUTOS -->
             <div class="nossos-produtos">
                 <h3>Nossos Produtos</h3>

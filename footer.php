@@ -50,7 +50,6 @@
     <div class="whatsapp">
         <a href="https://wa.me/5571993295049" target="_blank"> <img src="./IMG/whatsapp-icone-1.png" alt="botão whatsapp"></a>
     </div>
-    <script src="./Javascript/script.js"></script>
     <?php wp_footer(); ?>
 </body>
 </html>
