@@ -37,7 +37,7 @@ header {
     padding: 0 5rem;
 }
 
-#nav-lis .menu ul{
+#nav-list .menu{
     list-style-type: none;
     display: flex;
 }
@@ -129,6 +129,15 @@ header {
 .btn-mais-produtos:hover {
     cursor: pointer;
 }
+
+/* PAGE-CLIENETE */
+.clientes {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+}
+
 /* NOSSOS PROJETOS */
 .projetos {
     display: flex;
