@@ -242,6 +242,56 @@ textarea {
     height: 100%;
 }
 
+
+
+/* CONTATOS */
+
+
+.page-contato-area {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 100px 0px;
+    /* padding: 30px; */
+    /* gap: 32px; */
+}
+.map iframe {
+    border-radius: 24px 0 0 24px
+}
+.contatos {
+    
+    padding: 30px;
+    background: #e6e6e6;
+    border-radius: 0 24px 24px 0;
+}
+
+.input-effect {
+    box-sizing: content-box;
+    height: 32px;    
+    margin: 20px 0;
+    border-radius: 5px;
+    padding: 6px;
+    width: 500px;
+    display: flex;
+    align-items: center;
+    /* color: #ffffff; */
+    
+}
+.input-effect {    
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    width: 500px;
+    padding: 5px 10px;
+    margin: 10px 0;
+    background: #f2f2f2;
+    border-radius: 8px;
+}
+
+.input-effect i {
+    margin-right: 5px;
+}
+
 /* FOOTER */
 
 footer {
