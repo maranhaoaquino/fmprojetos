@@ -28,6 +28,9 @@ function cmb2_fields_clientes() {
       'name' => 'Logo Cliente',      
       'id' => 'logo_cliente',
       'type' => 'file',
+      'options' => [
+        'url' => false,
+      ],
     ]);
     $cmb->add_group_field($marca_cliente, [
       'name' => 'Nome da empresa',

@@ -16,6 +16,9 @@
                 <?php } ?>
             </div>
         </section>
+        <section>
+            <?php the_content(); ?>
+        </section>
     </main>
 <?php endwhile; endif; ?>
 <?php get_footer(); ?>

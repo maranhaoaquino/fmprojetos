@@ -28,6 +28,9 @@ function cmb2_fields_parceiros() {
       'name' => 'Logo Parceiro',      
       'id' => 'logo_parceiro',
       'type' => 'file',
+      'options' => [
+        'url' => false,
+      ],
     ]);
     $cmb->add_group_field($marca_cliente, [
       'name' => 'Nome da empresa',
