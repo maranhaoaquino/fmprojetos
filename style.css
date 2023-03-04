@@ -130,12 +130,30 @@ header {
     cursor: pointer;
 }
 
-/* PAGE-CLIENETE */
-.clientes {
+/* PAGE-CLIENTE */
+.template-middle {
     display: flex;
     justify-content: center;
     text-align: center;
     flex-direction: column;
+}
+
+.template-middle h2 {
+    font-size: 40px;    
+}
+
+.section-logos {
+    display: flex;
+    flex-grow: 1;
+    flex-shrink: 1;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    gap: 20px
+}
+
+.four-logos {
+    max-width: 1000px;
 }
 
 /* NOSSOS PROJETOS */
