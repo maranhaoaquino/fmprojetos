@@ -9,7 +9,7 @@ function cmb2_fields_produtos() {
     'object_types' => ['page'],
     'show_on' => [
       'key' => 'page-template',
-      'value' => ['page-produtos.php'],
+      'value' => ['page-produto.php'],
     ],
   ]);
 

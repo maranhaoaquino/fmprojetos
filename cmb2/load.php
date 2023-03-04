@@ -16,5 +16,6 @@ require_once get_template_directory() . '/cmb2/produtos.php';
 require_once get_template_directory() . '/cmb2/clientes.php';
 require_once get_template_directory() . '/cmb2/contatos.php';
 require_once get_template_directory() . '/cmb2/parceiros.php';
+require_once get_template_directory() . '/cmb2/single_produtos.php';
 
 ?>
