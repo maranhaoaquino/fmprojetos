@@ -18,19 +18,30 @@ function cmb2_fields_single_produtos() {
     ],
   ]);
 
-  $cmb->add_field([
-    'name' => 'Foto Produto 2',
-    'id' => 'foto_produto2',
+  $produtos_adicionais = $cmb->add_field([
+    'name' => 'Produtos Adicionais',
+    'id' => 'produtos_adicionais',
+    'type' => 'group',
+    'repeatable' => true,
+    'options' => [
+      'sortable' => true,
+      'add_button' => 'Adicionar',
+      'remove_button' => 'Remover',
+    ],
+  ]);
+
+  $cmb->add_group_field($produtos_adicionais, [
+    'name' => 'Imagem Adicional',      
+    'id' => 'imagem_adicional',
     'type' => 'file',
     'options' => [
       'url' => false,
     ],
   ]);
-
-  $cmb->add_field([
-    'name' => 'Resumo Produto',
-    'id' => 'resumo_produto',
-    'type' => 'text',
+  $cmb->add_group_field($produtos_adicionais, [
+    'name' => 'Descrição Adicional',      
+    'id' => 'descricao_adicional',
+    'type' => 'text_medium',
   ]);
 }
 
