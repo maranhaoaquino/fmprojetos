@@ -10,7 +10,7 @@ function cmb2_fields_contatos() {
       'object_types' => ['page'], // tipo de post
       'show_on' => [
         'key' => 'page-template',
-        'value' => 'page-contatos.php',
+        'value' => 'page-contato.php',
       ], // modelo de página
     ]);
 
