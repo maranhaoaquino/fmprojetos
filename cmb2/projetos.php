@@ -9,14 +9,20 @@ function cmb2_fields_projetos() {
     'object_types' => ['page'],
     'show_on' => [
       'key' => 'page-template',
-      'value' => ['page-produto.php'],
+      'value' => 'page-projetos.php',
     ],
   ]);
 
   $cmb->add_field([
-    'name' => 'Itens Orçamento',
-    'id' => 'itens_orcamento',
-    'type' => 'wysiwyg',
+    'name' => 'Gondolas',
+    'id' => 'titulo_gondolas',
+    'type' => 'text',
+  ]);
+
+  $cmb->add_field([
+    'name' => 'Camara frigorifica',
+    'id' => 'titulo_camara_frigorifica',
+    'type' => 'text',
   ]);
 }
 
