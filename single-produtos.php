@@ -3,25 +3,28 @@
 ?>
 <?php get_header(); ?>
 <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-    <main>
-        <section>
-            <div>
+    <main class="template-middle">
+        <section class="produto-principal">
+            <div class="img-produto">
                 <img src="<?php the_field_cmb2('imagem_principal_produto') ?>">
             </div>
-            <div>
+            <div class="descricao-produto">
                 <h2 class="title-produto"><?php the_title(); ?></h2>
                 <div class="description-produto"><?php the_content();  ?></div>
             </div>
         </section>
-        <section>
+        <section class="produtos-secundarios">
             <?php $produtos_adicionais = get_field_cmb2('produtos_adicionais'); if(isset($produtos_adicionais)) { ?>
                 <h3><?php the_title(); ?></h3>
-                <?php foreach($produtos_adicionais as $produto) { ?>
-                    <div>
-                        <img src="<?php echo $produto['imagem_adicional'] ?>">
-                        <p><?php echo $produto['descricao_adicional'] ?></p>
-                    </div>
-                <?php } ?>
+                <div class="area-produtos-secundarios">
+                    <?php foreach($produtos_adicionais as $produto) { ?>
+                        <div class="card-produtos-secundarios">
+                            <img src="<?php echo $produto['imagem_adicional'] ?>" width="222px" height="222px">
+                            <p><?php echo $produto['descricao_adicional'] ?></p>
+                        </div>                        
+                        <?php } ?>
+            
+                </div>
             <?php } ?>
         </section>
 
