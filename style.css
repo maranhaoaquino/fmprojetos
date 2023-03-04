@@ -255,28 +255,24 @@ textarea {
     /* padding: 30px; */
     /* gap: 32px; */
 }
+
+.map {
+    border: 1px solid #e6e6e6;
+    border-radius: 24px 0 0 24px;
+    box-shadow: 2px 2px 11px #ccc;
+}
+
 .map iframe {
     border-radius: 24px 0 0 24px
 }
-.contatos {
-    
+.contatos {    
     padding: 30px;
     background: #e6e6e6;
     border-radius: 0 24px 24px 0;
+    box-shadow: 2px 2px 11px #ccc;
 }
 
-.input-effect {
-    box-sizing: content-box;
-    height: 32px;    
-    margin: 20px 0;
-    border-radius: 5px;
-    padding: 6px;
-    width: 500px;
-    display: flex;
-    align-items: center;
-    /* color: #ffffff; */
-    
-}
+
 .input-effect {    
     display: flex;
     align-items: center;
@@ -286,7 +282,8 @@ textarea {
     margin: 10px 0;
     background: #f2f2f2;
     border-radius: 8px;
-    font-size: 20px
+    font-size: 20px;
+    box-shadow: 2px 2px 11px #ccc;
 }
 
 .input-effect i {
