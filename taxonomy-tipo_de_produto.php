@@ -7,7 +7,7 @@ $term = get_term_by( 'slug', get_query_var( 'term' ), get_query_var( 'taxonomy' 
 ?>
 <div class="wrapper">
   <div class="primary-content">
-    <h1 class="archive-title"><?php echo apply_filters( 'the_title', $term->name ); ?> News</h1>
+    <h1 class="archive-title"><?php echo apply_filters( 'the_title', $term->name ); ?></h1>
 
     <?php if ( have_posts() ): while ( have_posts() ): the_post(); ?>
 
