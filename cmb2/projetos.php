@@ -12,7 +12,7 @@ function cmb2_fields_projetos() {
     ],
   ]);
 
-  $categorias = $cmb->add_field([
+  $categorias_projetos = $cmb->add_field([
     'name' => 'Categorias',
     'id' => 'categorias_projeto',
     'type' => 'group',
@@ -23,16 +23,35 @@ function cmb2_fields_projetos() {
       'remove_button' => 'Remover'
     ]
   ]);
-  $clientes = $cmb->add_field($categorias,[
-    'name' => 'Clientes',
-    'id' => 'categorias_projeto',
+
+  $clientes_projetos = $cmb->add_group_field($categorias_projetos, [
+    'name' => 'Clientes',      
+    'id' => 'clientes_projetos',
     'type' => 'group',
     'repeatable' => true,
     'options' => [
       'sortable' => true,
       'add_button' => 'Adicionar',
       'remove_button' => 'Remover'
-    ]
+    ],
+  ]);
+
+  $cmb->add_field([
+    'name' => 'Nome do Cliente',
+    'id' => 'nome_cliente',
+    'type' => 'text',
+  ]);
+
+  $cmb->add_group_field($clientes_projetos, [
+    'name' => 'imagem',
+    'id' => 'imagem_cliente',
+    'type' => 'file',
+    'repeatable' => true,
+    'options' => [
+      'sortable' => true,
+      'add_button' => 'Adicionar',
+      'remove_button' => 'Remover'
+    ],
   ]);
 }
 ?>
