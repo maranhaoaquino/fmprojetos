@@ -1,5 +1,4 @@
 <?php
-
 add_action('cmb2_admin_init', 'cmb2_fields_projetos');
 
 function cmb2_fields_projetos() {
@@ -13,17 +12,27 @@ function cmb2_fields_projetos() {
     ],
   ]);
 
-  $cmb->add_field([
-    'name' => 'Gondolas',
-    'id' => 'titulo_gondolas',
-    'type' => 'text',
+  $categorias = $cmb->add_field([
+    'name' => 'Categorias',
+    'id' => 'categorias_projeto',
+    'type' => 'group',
+    'repeatable' => true,
+    'options' => [
+      'sortable' => true,
+      'add_button' => 'Adicionar',
+      'remove_button' => 'Remover'
+    ]
   ]);
-
-  $cmb->add_field([
-    'name' => 'Camara frigorifica',
-    'id' => 'titulo_camara_frigorifica',
-    'type' => 'text',
+  $clientes = $cmb->add_field($categorias,[
+    'name' => 'Clientes',
+    'id' => 'categorias_projeto',
+    'type' => 'group',
+    'repeatable' => true,
+    'options' => [
+      'sortable' => true,
+      'add_button' => 'Adicionar',
+      'remove_button' => 'Remover'
+    ]
   ]);
 }
-
 ?>
