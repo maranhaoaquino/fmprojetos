@@ -13,7 +13,7 @@ function cmb2_fields_parceiros() {
       ], // modelo de página
     ]);
 
-    $marca_cliente = $cmb->add_field([
+    $marca_parceiro = $cmb->add_field([
       'name' => 'Parceiro',
       'id' => 'marca_parceiro',
       'type' => 'group',
@@ -24,7 +24,7 @@ function cmb2_fields_parceiros() {
         'remove_button' => 'Remover',
       ],
     ]);
-    $cmb->add_group_field($marca_cliente, [
+    $cmb->add_group_field($marca_parceiro, [
       'name' => 'Logo Parceiro',      
       'id' => 'logo_parceiro',
       'type' => 'file',
@@ -32,12 +32,12 @@ function cmb2_fields_parceiros() {
         'url' => false,
       ],
     ]);
-    $cmb->add_group_field($marca_cliente, [
+    $cmb->add_group_field($marca_parceiro, [
       'name' => 'Nome da empresa',
       'id' => 'nome_parceiro',
       'type' => 'text',
     ]);    
-    $cmb->add_group_field($marca_cliente, [
+    $cmb->add_group_field($marca_parceiro, [
       'name' => 'Link',
       'id' => 'link_parceiro',
       'type' => 'text_url',
