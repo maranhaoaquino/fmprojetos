@@ -33,25 +33,37 @@
                 <h2>Nossos Produtos</h2>
                 <!-- ESPAÇO PARA OS CARD DOS PRODUTOS -->
                 <div class="lista-produtos">
-                    <?php include(TEMPLATEPATH . "/inc/card.php"); ?>
-                    <div class="card">
-                        <div class="card-header">
-                            <img src="./IMG/0ec170f6efd59b57b3f0961b3f8d5590.jpg" alt="" height="100%">
-                        </div>
-                        <div class="card-body">
-                            <h5>Titulo 2</h5>
-                            <button class="btn-preco">
-                                Preço Sob Consulta
-                            </button>
-                            <p>
-                                Nullam aliquam nisi eget condimentum vehicula.
-                                Praesent semper imperdiet bibendum.
-                                Suspendisse non ultricies augue.
-                                Integer imperdiet felis quis tempus finibus.
-                            </p>
-                        </div>
-                    </div>                
+                    <?php
+                        $args = array (
+                            'post_type' => 'produtos',
+                            'order'   => 'ASC'
+                        );
+                        $the_query = new WP_Query ( $args );
+                    ?>
+
+                    <?php if ( $the_query->have_posts() ) : while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
+
+                        <a href="<?php the_permalink(); ?>" rel="bookmark">
+                            <div class="card" id="post-<?php the_ID(); ?>" <?php post_class('post clearfix'); ?>>
+                                <div class="card-header">
+                                    <img src="<?php the_field_cmb2('imagem_principal_produto'); ?>" alt="<?php the_title(); ?>" height="100%">
+                                </div>
+                                <div class="card-body">
+                                    <h5><a href="<?php the_permalink(); ?>" rel="bookmark"><?php the_title(); ?></a></h5>
+                                    <a href="<?php the_permalink(); ?>" rel="bookmark" class="btn-preco">
+                                        Preço Sob Consulta
+                                    </a>
+                                    <p>
+                                    <?php the_content( __('Full story…') ); ?>
+                                    </p>
+                                </div>
+                            </div>
+                        </a>
+
+                    <?php endwhile; else: endif; ?>
+                    <?php wp_reset_query(); wp_reset_postdata(); ?>           
                 </div>
+
                 <button class="btn-mais-produtos">
                     Veja nossos Produtos
                 </button>
