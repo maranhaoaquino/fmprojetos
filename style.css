@@ -56,9 +56,9 @@ header {
 
 /* MAIN */
 
-
+/*HOME*/
 /* NOSSO PRODUTOS */
-.nossos-produtos {
+.componentes-home {
     display: flex;
     width: 100%;
     flex-direction: column;
@@ -75,7 +75,7 @@ header {
 .lista-produtos {
     display: flex;
     padding: 2rem 0;
-    max-width: 100%;
+    max-width: 1200px;
     justify-content: center;
     flex-wrap: wrap;
     flex-grow: 1;
@@ -89,6 +89,7 @@ header {
     box-shadow: 1px 2px 8px 1px rgb(0, 0, 0);
     border-radius: 5px;
     margin: 1rem;
+    overflow: hidden;   
 }
 
 .card-header {
@@ -106,7 +107,7 @@ header {
     flex-direction: column;
     padding: 1rem 1rem;
     box-sizing: border-box;
-
+    gap: 4px;
 }
 
 .btn-preco {
@@ -119,7 +120,7 @@ header {
     cursor: pointer
 }
 
-.btn-mais-produtos {
+.btn-black-home {
     margin-bottom: 1rem;
     padding: 1rem;
     background-color: #000;
@@ -127,11 +128,48 @@ header {
     border: none;
     border-radius: 5px;
     width: 18rem;
-    font-size: 18px
+    font-size: 18px;
+    
 }
 
 .btn-mais-produtos:hover {
     cursor: pointer;
+}
+
+/*QUALIDADE*/ 
+
+/*PROJETOS REALIZADOS*/
+.item-css {    
+    display: flex;
+    padding: 2rem 0;
+    max-width: 1200px;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-grow: 1;
+    flex-shrink: 1;
+    gap: 30px;
+}
+
+/*NOSSOS PARCEIROS*/ 
+.parceiros {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    flex-grow: 1;
+    justify-content: center;
+    align-content: center;
+}
+
+/*NOSSOS CLIENTES*/ 
+.clientes {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    flex-grow: 1;
+    justify-content: center;
+    align-content: center;
 }
 
 /* PAGE-CLIENTE */
@@ -164,14 +202,24 @@ header {
 }
 
 /* NOSSOS PROJETOS */
-.projetos {
+
+
+.fotos-projetos {    
     display: flex;
+    padding: 2rem 0;
+    max-width: 1200px;
     justify-content: center;
-    text-align: center;
-    flex-direction: row;
-    width: 100%;
-    align-items: center;
-    align-content: center
+    flex-wrap: wrap;
+    flex-grow: 1;
+    flex-shrink: 1;    
+}
+
+.img-projetos {
+    width: 306px;
+    height: 376;
+    object-fit: contain;
+    border: none;
+    border-radius: 20px;
 }
 
 
@@ -348,6 +396,7 @@ footer {
     justify-content: center;
     flex-direction: column;
     gap: 30px;
+    box-sizing: border-box;
 }
 
 
@@ -355,6 +404,7 @@ footer {
     display: flex;
     flex-wrap: wrap;
     gap: 59px;
+    justify-content: inherit;
 }
 
 .input-div {    
@@ -365,15 +415,16 @@ footer {
 
 .input-type-a {
     border-radius: 5px;
-    width: 222px;
+    /* width: 222px; */
     border: none;
     padding: 14px;
     background: #e6e6e6;
     
 }
+
 .form-div-b {
     display: flex;
-    flex-direction: row;
+    justify-content: inherit;
 }
 
 textarea {
@@ -381,6 +432,11 @@ textarea {
     border: none;        
     background: #e6e6e6;
     width: 862px;
+}
+
+.form-div-btn {
+    display: flex;
+    justify-content: inherit;
 }
 
 .btn-enviar {
@@ -402,4 +458,22 @@ textarea {
 
 .label-form {
     font-size: 18px
+}
+
+
+/*RESPONSIVE*/ 
+@media (max-width: 578px) {
+    #slide-clientes {
+        max-width: 240px;
+    }
+
+    /*CONTATO EMAIL*/
+    
+
+    textarea {
+        max-width: 240px;
+    }
+    .btn-enviar {
+        max-width: 240px;
+    }
 }
