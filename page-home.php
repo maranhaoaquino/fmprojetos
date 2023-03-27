@@ -22,7 +22,7 @@
             <?php } ?>
             <script>
                 $('#slide-principal').owlCarousel({
-                    loop:true,
+                    loop:false,
                     nav:true,
                     items: 1,
                     dots: true
@@ -136,7 +136,7 @@
                 if(isset($marca_parceiro)) {
                 ?>
                 <div class="item-css">
-                    <div id="slide-parceiros " class="owl-carousel owl-theme">
+                    <div id="slide-parceiros" class="owl-carousel owl-theme">
                         <?php foreach($marca_parceiro as $slide) { ?>
                             <div class="item">
                                 <a href="<?php echo $slide['link_parceiro'] ?>">
@@ -150,7 +150,7 @@
                 <?php } ?>
                 <script>
                     $('#slide-parceiros').owlCarousel({
-                        loop:true,
+                        loop:false,
                         nav:true,
                         dots: true,
                         responsive:{
@@ -192,7 +192,7 @@
                 <?php } ?>
                 <script>
                     $('#slide-clientes').owlCarousel({
-                        loop:true,
+                        loop:false,
                         nav:true,
                         dots: true,
                         responsive:{
