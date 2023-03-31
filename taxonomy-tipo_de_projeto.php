@@ -21,7 +21,7 @@ $term = get_term_by( 'slug', get_query_var( 'term' ), get_query_var( 'taxonomy' 
             <div class="slide-projeto owl-carousel owl-theme">
               <?php foreach($slide_projeto as $slide) { ?>
                 <div class="item">
-                  <img src="<?php echo $slide['foto_projeto'] ?>">
+                  <img src="<?php echo $slide['foto_projeto'] ?>" width="100px" height="100px">
                 </div>
               <?php } ?>
             </div>

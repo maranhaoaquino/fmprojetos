@@ -11,11 +11,23 @@
             <div id="slide-principal" class="owl-carousel owl-theme">
                 <?php foreach($slide_principal as $slide) { ?>
                     <div class="item">
-                        <a href="<?php echo $slide['link_slide'] ?>">
-                            <img src="<?php echo $slide['img_slide'] ?>">
-                            <h2><?php echo $slide['title_slide'] ?></h2>
-                            <p><?php echo $slide['subtitle_slide'] ?></p>
-                        </a>
+                        
+                            <a href="<?php echo $slide['link_slide'] ?>">
+                                <img src="<?php echo $slide['img_slide'] ?>">
+                                <div id="grid-slider">
+                                    <h2><?php echo $slide['title_slide'] ?></h2>
+                                    <p><?php echo $slide['subtitle_slide'] ?></p>
+                                    <div class="area-btn-grid-slider">
+                                        <button id="btn-nossos-produtos">
+                                            Veja nossos produtos
+                                        </button>
+                                        <button id="btn-consultor">
+                                            Fale com um consultor
+                                        </button>
+                                    </div>
+                                </div>
+                            </a>
+                        
                     </div>
                 <?php } ?>
             </div>
@@ -30,7 +42,7 @@
             </script>
             <!-- PRODUTOS -->
             <div class="componentes-home">
-                <h2>Nossos Produtos</h2>
+                <h2 class="titulo-home">Nossos <span class="bold-titulo"> Produtos </span></h2>
                 <!-- ESPAÇO PARA OS CARD DOS PRODUTOS -->
                 <div class="lista-produtos">
                     <?php
@@ -70,17 +82,19 @@
             </div>
             <!-- Qualidade -->
             <div class="componentes-home">
-                <h2>Qualidade Garantida</h2>
+                <h2 class="titulo-home"> Qualidade <span class="bold-titulo">Garantida</span></h2>
                 <!-- Slide Principal -->
                 <?php $vantagens = get_field_cmb2('vantagens'); 
                     if(isset($vantagens)) {
                 ?>
-                <div id="vantagens">
+                <div id="componentes-home">
                     <?php foreach($vantagens as $vantagem) { ?>
-                        <div class="vantagem">
-                            <img src="<?php echo $vantagem['img_vantagens'] ?>">
-                            <h3><?php echo $vantagem['title_vantagens'] ?></h3>
-                            <p><?php echo $vantagem['subtitle_vantagens'] ?></p>
+                        <div class="item-css">
+                            <div class="card-qualidades">
+                                <img src="<?php echo $vantagem['img_vantagens'] ?>">
+                                <h3><?php echo $vantagem['title_vantagens'] ?></h3>
+                                <p><?php echo $vantagem['subtitle_vantagens'] ?></p>
+                            </div>
                         </div>
                     <?php } ?>
                 </div>
@@ -89,7 +103,9 @@
             <!-- Qualidade -->
             <div class="orcamento-projeto">
                 <h2>Faça seu projeto conosco</h2>
-                <a href="#orçamento" class="btn-primary">Fale com a gente</a>
+                <button class="btn-black-home">
+                    Fale com a gente
+                </button> 
             </div>
             <!-- PROJETOS -->
             <div class="componentes-home">
@@ -208,7 +224,7 @@
                                 items: 6,
                                 margin: 30
                             }
-                        }
+                        }   
                     });
                 </script>
             </div>       

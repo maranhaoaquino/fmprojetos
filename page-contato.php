@@ -7,7 +7,7 @@
         <h2><?php echo the_title('' )?></h2>
         <div class="page-contato-area">
             <div class="map">
-                <iframe src="<?php the_field_cmb2('link_mapa');?>" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <iframe src="<?php the_field_cmb2('link_mapa');?>" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
             <div class="contatos">     
                 <div class="input-effect">

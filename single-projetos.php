@@ -11,7 +11,7 @@
                 <div id="slide-projeto" class="owl-carousel owl-theme">
                     <?php foreach($slide_projeto as $slide) { ?>
                         <div class="item">
-                            <img src="<?php echo $slide['foto_projeto'] ?>">
+                            <img src="<?php echo $slide['foto_projeto']  ?> ">
                         </div>
                     <?php } ?>
                 </div>
