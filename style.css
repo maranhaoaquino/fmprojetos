@@ -561,13 +561,8 @@ textarea {
 
 /*RESPONSIVE*/ 
 @media (max-width: 578px) {
-    #slide-clientes {
-        max-width: 240px;
-    }
 
     /*CONTATO EMAIL*/
-    
-
     textarea {
         max-width: 240px;
     }
