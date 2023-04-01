@@ -5,7 +5,7 @@
                 <img src="<?php the_field_cmb2('imagem_principal_produto'); ?>" alt="<?php the_title(); ?>">
             </div>
             <div class="card-body">
-                <a href="<?php the_permalink(); ?>" rel="bookmark"><h5><?php the_title(); ?></h5></a>
+                <a href="<?php the_permalink(); ?>" rel="bookmark" class="card-produtos-titulo"><h5><?php the_title();?></h5></a>
                 <a href="<?php the_permalink(); ?>" rel="bookmark" class="btn-preco">
                     Preço Sob Consulta
                 </a>

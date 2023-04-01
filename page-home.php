@@ -58,7 +58,7 @@
                 </div>
 
                 <div class="row mt-3 justify-content-center">
-                    <div class="col-6 col-sm-4">
+                    <div class="col-8 col-sm-4">
                         <a class="btn btn-primary btn-black-home">
                             Veja nossos Produtos
                         </a>
@@ -87,11 +87,22 @@
                 </div>
             <?php } ?>
             <!-- Realizar Orçamento -->
-            <div class="orcamento-projeto">
-                <h2>Faça seu projeto conosco</h2>
-                <button class="btn-black-home">
-                    Fale com a gente
-                </button> 
+            <div class="container-fluid mt-5 px-0" >
+                <div class="row text-center">
+                    <img src="<?php echo get_template_directory_uri(); ?>/img/img-bg-fale-conosco-white.png" class="p-0" alt="">
+                        
+                </div>
+                
+                <div class="d-flex flex-column align-items-center text-center justify-content-center pt-5 pb-5" id="fale-conosco-img-black" style="background: url('<?php echo get_template_directory_uri(); ?>/img/img-fale-conosco-black.png')">                    
+                    <div class="text-center">
+                        <h2 class="titulo-fale-conosco ">Faça seu projeto conosco</h2>                    
+                    </div>   
+                    <div class="col-8 col-sm-4 mt-3">
+                        <a class="btn btn-primary btn-black-home">
+                            Fale com a gente
+                        </a>
+                    </div>
+                </div>
             </div>
             <!-- PROJETOS -->
             <div class="container mt-5">
@@ -116,7 +127,7 @@
                                 <?php $slide_projeto = get_field_cmb2('slide_projeto'); 
                                     if(!empty($slide_projeto)) {
                                 ?>
-                                    <img src="<?php echo $slide_projeto[0]['foto_projeto'] ?>">
+                                    <img src="<?php echo $slide_projeto[0]['foto_projeto'] ?>" class="img-projetos">
                                 <?php } ?>
                             </div>
                         </a>
@@ -124,12 +135,12 @@
                     <?php wp_reset_query(); wp_reset_postdata(); ?>
                 </div>
                 <div class="row mt-3 justify-content-center">
-                    <div class="col-6 col-sm-4">
+                    <div class="col-8 col-sm-4">
                         <a class="btn btn-primary btn-black-home">
                             Veja nossos Projetos
                         </a>
                     </div>
-                </div> 
+                </div>
             </div>
             <!-- PARCEIROS -->
             <?php $parceiros = get_page_by_title('Nossos Parceiros')->ID; ?>

@@ -17,7 +17,8 @@ Use-o para fazer algo legal, se divertir e compartilhar o que aprendeu com outra
 * {
     padding: 0;
     margin: 0;
-    box-sizing: content-box;    
+    box-sizing: content-box;
+    overflow-x: hidden;
 }
 
 a {
@@ -41,6 +42,16 @@ header {
     width: 100%;    
 }
 
+#navmap {
+    width: 100%;
+}
+
+#nav-list-2 .menu {
+    display: none;
+}
+
+
+
 #nav-list .menu{
     list-style-type: none;
     display: flex;
@@ -50,7 +61,13 @@ header {
 
 
 #nav-list #menu-principal li a {    
-    color: #fff !important;
+    color: #fff;
+    text-decoration: none;
+}
+
+#nav-list #menu-principal li a:visited {    
+    color: #fff;
+    text-decoration: none;
 }
 
 #grid-slider {
@@ -104,6 +121,11 @@ header {
 
 #btn-consultor:hover {
     cursor: pointer
+}
+
+/*HAMBURGUER*/
+.hamburguer {
+    display: none;
 }
 
 /* MAIN */
@@ -174,11 +196,34 @@ header {
     gap: 4px;
 }
 
+.card-produtos-titulo {
+    text-decoration: none;
+    color: #000;
+}
+
+.card-produtos-titulo:visited {
+    text-decoration: none;
+    color: #000;
+}
+
 .btn-preco {
     background-color: #fff;
     border-radius: 5px;
     border: 1px solid #000;
-    padding: 0 5px
+    padding: 0 5px;
+    text-decoration: none;
+    color: #000;
+
+}
+
+.btn-preco:visited {
+    background-color: #fff;
+    border-radius: 5px;
+    border: 1px solid #000;
+    padding: 0 5px;
+    text-decoration: none;
+    color: #000;
+    
 }
 
 .btn-preco:hover {
@@ -290,7 +335,7 @@ header {
 /* NOSSOS PROJETOS */
 
 
-.fotos-projetos {    
+/* .fotos-projetos {    
     display: flex;
     padding: 2rem 0;
     max-width: 1200px;
@@ -298,14 +343,28 @@ header {
     flex-wrap: wrap;
     flex-grow: 1;
     flex-shrink: 1;    
-}
+} */
 
 .img-projetos {
-    width: 306px;
-    height: 376;
-    object-fit: contain;
+    width: 100%;    
+    object-fit: cover;
     border: none;
-    border-radius: 20px;
+    border-radius: 20px
+}
+
+/*FAÇA SEU PROJETO*/
+#fale-conosco-img-black {
+    object-fit: cover;
+    width: 101%;    
+    background-repeat: no-repeat !important;
+    background-position: center !important;
+    box-sizing: border-box;    
+}
+
+.titulo-fale-conosco {
+    color: #fff;
+    font-size: 48px;
+    font-weight: 600;    
 }
 
 
@@ -473,6 +532,10 @@ footer {
     padding: 100px 0px
 }
 
+.copyright {
+    font-size: 16px;
+}
+
 .contato-email form {
     padding: 1rem 0;
 }
@@ -559,6 +622,11 @@ textarea {
 
 }
 
+
+#fakeBurguer {
+    display:none;
+}
+
 /*RESPONSIVE*/ 
 @media (max-width: 578px) {
 
@@ -595,5 +663,47 @@ textarea {
         font-size: 14px;
         box-shadow: 2px 2px 11px #ccc;
         overflow: hidden;
+    }
+
+    
+}
+
+@media (max-width: 900px) {
+    /*HAMBURGUER*/
+    #navmap {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: flex-end;
+    }
+    #nav-list {
+        display: none
+    }
+
+    #nav-list-2 {
+        display: none;
+    }
+    #nav-list-2 .menu {
+        list-style-type: none;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        font-size: 20px;
+        align-items: center;
+        width: 100%;        
+    }
+
+    #nav-list-2 .menu li a {
+        color: #fff;
+        text-decoration: none;  
+    }
+
+    #nav-list-2 .menu li a:visited {
+        color: #fff;
+        text-decoration: none;
+
+    }
+    #fakeBurguer {
+        display:flex;
     }
 }
