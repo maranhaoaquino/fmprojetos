@@ -149,4 +149,9 @@ function themename_custom_logo_setup() {
 }
 add_action( 'after_setup_theme', 'themename_custom_logo_setup' );
 
+function mytheme_custom_excerpt_length( $length ) {
+    return 20;
+}
+add_filter( 'excerpt_length', 'mytheme_custom_excerpt_length', 999 );
+
 ?>

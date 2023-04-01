@@ -113,10 +113,11 @@ header {
 .titulo-home {
     font-size: 48px;
     color: #000;
+    font-weight: 300;
 }
 
 .bold-titulo {
-    font-weight: bold;
+    font-weight: 600;
 }
 /* NOSSO PRODUTOS */
 .componentes-home {
@@ -143,7 +144,7 @@ header {
     flex-shrink: 1;
 }
 
-.card {
+/*.card {
     height: 30rem;
     width: 20rem;
     margin: 0 1rem;
@@ -151,10 +152,12 @@ header {
     border-radius: 5px;
     margin: 1rem;
     overflow: hidden;   
-}
+}*/
 
-.card-header {
+.card-produto .card-header {
     height: 60%;
+    padding: 0;
+    overflow: hidden;
 }
 
 .card-header img {
@@ -182,52 +185,28 @@ header {
     cursor: pointer
 }
 
-.btn-black-home {
-    margin-bottom: 1rem;
-    padding: 1rem;
+.btn.btn-primary.btn-black-home {
     background-color: #000;
+    padding: 1rem;
     color: #fff;
     border: none;
-    border-radius: 5px;
-    width: 18rem;
+    width: 100%;
     font-size: 18px;
-    
-}
-
-.btn-mais-produtos:hover {
     cursor: pointer;
 }
 
 /*QUALIDADE*/
 .card-qualidades {
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     flex-direction: column;
-    width: 100%;
-    
-    max-width: 300px;
-    height: 500px;
-    overflow: hidden;
+    width: 100%;   
     align-items: center;
-    gap: 18px
 }
 
 .card-qualidades img {
-    width: 58px;
-    height: 58px;
-}
-
-.card-qualidades h3 {
-    line-height: 29px;
-    font-weight: 500;
-    font-size: 24px
-}
-
-.card-qualidade p {
-    line-height: 19px;
-    font-weight: 400;
-    font-size: 16px;
-    text-align: center;
+    width: 64px;
+    height: 64px;
 }
 
 .orcamento-projeto {

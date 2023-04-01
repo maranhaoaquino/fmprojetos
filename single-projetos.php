@@ -6,7 +6,7 @@
     <main class="template-middle">
         <h2><?php the_title(); ?><h2>
         <?php $slide_projeto = get_field_cmb2('slide_projeto'); 
-            if(isset($slide_projeto)) {
+            if(!empty($slide_projeto)) {
         ?>
                 <div id="slide-projeto" class="owl-carousel owl-theme">
                     <?php foreach($slide_projeto as $slide) { ?>

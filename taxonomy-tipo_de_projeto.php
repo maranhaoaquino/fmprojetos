@@ -16,7 +16,7 @@ $term = get_term_by( 'slug', get_query_var( 'term' ), get_query_var( 'taxonomy' 
             <h3><a href="<?php the_permalink(); ?>" rel="bookmark"><?php the_title(); ?></a></h3>
           </div>
           <?php $slide_projeto = get_field_cmb2('slide_projeto'); 
-              if(isset($slide_projeto)) {
+              if(!empty($slide_projeto)) {
           ?>
             <div class="slide-projeto owl-carousel owl-theme">
               <?php foreach($slide_projeto as $slide) { ?>

@@ -1,5 +1,5 @@
 
-    <footer >
+    <footer>
         <!-- FORMULARIO DE CONTATO -->
         <section class="contato-email">
             <div class="svg-footer">

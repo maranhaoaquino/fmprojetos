@@ -14,7 +14,7 @@
             </div>
         </section>
         <section class="produtos-secundarios">
-            <?php $produtos_adicionais = get_field_cmb2('produtos_adicionais'); if(isset($produtos_adicionais)) { ?>
+            <?php $produtos_adicionais = get_field_cmb2('produtos_adicionais'); if(!empty($produtos_adicionais)) { ?>
                 <h3><?php the_title(); ?></h3>
                 <div class="area-produtos-secundarios">
                     <?php foreach($produtos_adicionais as $produto) { ?>
