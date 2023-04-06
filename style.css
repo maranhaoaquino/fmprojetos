@@ -17,8 +17,6 @@ Use-o para fazer algo legal, se divertir e compartilhar o que aprendeu com outra
 * {
     padding: 0;
     margin: 0;
-    box-sizing: content-box;
-    overflow-x: hidden;
 }
 
 a {
@@ -213,7 +211,7 @@ header {
     padding: 0 5px;
     text-decoration: none;
     color: #000;
-
+    width: 153px;
 }
 
 .btn-preco:visited {
