@@ -362,7 +362,8 @@ header {
 .titulo-fale-conosco {
     color: #fff;
     font-size: 48px;
-    font-weight: 600;    
+    font-weight: 600;
+    margin-top: 40px;    
 }
 
 
@@ -613,16 +614,20 @@ textarea {
     position: relative;
 }
 
-/*PROJETOS*/
-
-/*TAXONOMY-PRODUTOS*/
-.taxonomy-grid-produtos {
-
-}
-
-
 #fakeBurguer {
     display:none;
+}
+
+:root {
+    --size: 50px; /* size of the cut */
+    --gap: 10px;  /* the gap */
+}
+#fale-conosco-white{
+    clip-path: polygon(0 0,100% 0,100% calc(100% - var(--size)),50% 100%,0 calc(100% - var(--size)));
+    filter: opacity(80%);
+}
+#fale-conosco-black{
+    clip-path: polygon(0 0,50% var(--size),100% 0,100% 100%,0 100%);
 }
 
 /*RESPONSIVE*/ 
