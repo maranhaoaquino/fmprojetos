@@ -630,6 +630,33 @@ textarea {
     clip-path: polygon(0 0,50% var(--size),100% 0,100% 100%,0 100%);
 }
 
+.owl-nav {
+    margin-top: 0 !important;
+    position: absolute;
+    top: 40%;
+    z-index: 9;
+    width: 100%;
+}
+
+.owl-carousel .owl-nav button.owl-next, .owl-carousel .owl-nav button.owl-prev {
+    width: 35px;
+    height: 35px;
+}
+
+.owl-nav .owl-prev {
+    left: 0;
+    position: absolute;
+}
+
+.owl-nav .owl-next {
+    right: 0;
+    position: absolute;
+}
+
+.owl-nav i {
+    font-size: 35px;
+}
+
 /*RESPONSIVE*/ 
 @media (max-width: 578px) {
 
