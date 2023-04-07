@@ -56,7 +56,7 @@
         </section>
     </footer>
     <div class="whatsapp">
-        <a href="https://wa.me/5571993295049" target="_blank"> <img src="<?php echo get_template_directory_uri(); ?>/img/whatsapp-icone-1.png" alt="botão whatsapp"></a>
+        <a href="https://wa.me/5571993295049" target="_blank"> <img src="<?php echo get_template_directory_uri(); ?>/img/zapquadrado.png" alt="botão whatsapp"></a>
     </div>
     <?php wp_footer(); ?>
 </body>

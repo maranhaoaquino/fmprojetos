@@ -376,6 +376,12 @@ header {
     right: 2%;
     box-sizing: content-box;
     border-radius: 50%;
+    opacity: 50%;
+    transition: 1s;
+}
+
+.whatsapp:hover {
+    opacity: 100%;
 }
 
 .whatsapp img {
