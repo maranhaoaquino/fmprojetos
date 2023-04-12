@@ -27,17 +27,18 @@ a {
 header {        
     background: #35363A;
 }
+.logo a{
+    color: #fff;
+    text-decoration: none;
+}
 
-.header-class {
-    padding: 10px 0;
-    width: 100%;
-    max-width: 1200px;
-    margin-left: auto;    
-    margin-right: auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;    
+.logo a:hover {    
+    color: #ccc;
+    text-decoration: underline;
+}
+
+.logo a h1{
+    font-size: 48px;
 }
 
 #nav-list {
@@ -47,7 +48,8 @@ header {
 #nav-list .menu ul{
     list-style-type: none;
     display: flex;
-    gap: 16px;
+    gap: 20px;
+    justify-content:flex-end;
     font-size: 20px;
     flex-wrap: wrap;
     padding: 0px;
@@ -60,9 +62,9 @@ header {
     text-decoration: none;
 }
 
-#nav-list ul li a:visited {    
-    color: #fff;
-    text-decoration: none;
+#nav-list ul li a:hover {    
+    color: #ccc;
+    text-decoration: underline;
 }
 
 #grid-slider {
@@ -116,11 +118,6 @@ header {
 
 #btn-consultor:hover {
     cursor: pointer
-}
-
-/*HAMBURGUER*/
-.hamburguer {
-    display: none;
 }
 
 /* MAIN */
