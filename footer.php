@@ -42,8 +42,8 @@
             </div>
             <div class="redes-sociais">
                 <ul class="lista-icones">
-                    <li>
                     <?php $contatos = get_page_by_title('contatos')->ID; ?>
+                    <li>
                         <a href="<?php the_field_cmb2('instagram', $contatos); ?>" target="_blank">
                             <i class="fa fa-instagram" aria-hidden="true"></i>
                         </a>

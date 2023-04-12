@@ -20,44 +20,37 @@
 <body>
     <!-- CABEÇALHO -->
     <header>
-        <div class="header-class">
-            <!-- ESPACO PARA LOGO -->
-            <div class="logo">
-                <a href="<?php echo get_home_url(); ?>" target="_blank" >
-                    <?php
-                        $custom_logo_id = get_theme_mod( 'custom_logo' );
-                        $logo = wp_get_attachment_image_src( $custom_logo_id , 'full' );
-                        if ( has_custom_logo() ) {
-                            echo '<img src="' . esc_url( $logo[0] ) . '" alt="' . get_bloginfo( 'name' ) . '">';
-                        } else {
-                            echo '<h1>' . get_bloginfo('name') . '</h1>';
-                        }
-                    ?>
-                </a>
-            </div>
-            <!-- NAVEGAÇÃO -->
-            <div id="navmap">
-                <nav id="nav-list">
-                    <?php
-						$args = array(
-							'menu' => 'principal',
-							'theme_location' => 'menu-principal',
-							'container' => false
-						);
-						wp_nav_menu( $args );
-					?>
-                </nav>
+        <div class="container">
+            <div class="row pt-3 pb-3">
+                <div class="col-12 col-sm-3 d-flex align-items-center">
+                    <!-- ESPACO PARA LOGO -->
+                    <div class="logo">
+                        <a href="<?php echo get_home_url(); ?>" target="_blank" >
+                            <?php
+                                $custom_logo_id = get_theme_mod( 'custom_logo' );
+                                $logo = wp_get_attachment_image_src( $custom_logo_id , 'full' );
+                                if ( has_custom_logo() ) {
+                                    echo '<img src="' . esc_url( $logo[0] ) . '" alt="' . get_bloginfo( 'name' ) . '">';
+                                } else {
+                                    echo '<h1>' . get_bloginfo('name') . '</h1>';
+                                }
+                            ?>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-9 d-flex align-items-center">
+                    <!-- NAVEGAÇÃO -->
+                    <nav id="nav-list">
+                        <?php
+                            $args = array(
+                                'menu' => 'principal',
+                                'theme_location' => 'menu-principal',
+                                'container' => false
+                            );
+                            wp_nav_menu( $args );
+                        ?>
+                    </nav>
+                </div>
             </div>
         </div>
     </header>
-    <nav id="nav-list-2">
-                    <?php
-						$args = array(
-							'menu' => 'principal',
-							'theme_location' => 'menu-principal',
-							'container' => false
-						);
-						wp_nav_menu( $args );
-					?>
-    </nav>
-    <script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/js/script.js"></script>

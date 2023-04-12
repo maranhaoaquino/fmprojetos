@@ -1,5 +1,5 @@
 /*
-Nome do Tema: Reste
+Nome do Tema: FMProjetos
 URI do tema: http://luketa.me/
 Autor: Lucas Maranhao
 URI do autor: http://luketa.me/
@@ -40,30 +40,27 @@ header {
     width: 100%;    
 }
 
-#navmap {
+#nav-list {
     width: 100%;
 }
 
-#nav-list-2 .menu {
-    display: none;
-}
-
-
-
-#nav-list .menu{
+#nav-list .menu ul{
     list-style-type: none;
     display: flex;
-    gap: 20px;
+    gap: 16px;
     font-size: 20px;
+    flex-wrap: wrap;
+    padding: 0px;
+    margin: 0px;
 }
 
 
-#nav-list #menu-principal li a {    
+#nav-list ul li a {    
     color: #fff;
     text-decoration: none;
 }
 
-#nav-list #menu-principal li a:visited {    
+#nav-list ul li a:visited {    
     color: #fff;
     text-decoration: none;
 }
@@ -698,8 +695,7 @@ textarea {
     
 }
 
-@media (max-width: 900px) {
-    /*HAMBURGUER*/
+/* @media (max-width: 900px) {
     #navmap {
         display: flex;
         justify-content: center;
@@ -736,4 +732,4 @@ textarea {
     #fakeBurguer {
         display:flex;
     }
-}
+} */
