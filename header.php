@@ -78,12 +78,12 @@
                 </div>
                 <div class="col-6 d-flex align-items-center justify-content-end">
                     <!-- NAVEGAÇÃO -->
-                    <nav  class="navbar navbar-light bg-light">
+                    <nav  class="navbar navbar-light">
                     <div class="container-fluid">
                         <button class="navbar-toggler ms-auto" type="button" onclick="removeCollapse()" data-mdb-toggle="collapse"
                         data-mdb-target="#navbarToggleExternalContent3" aria-controls="navbarToggleExternalContent3"
                         aria-expanded="false" aria-label="Toggle navigation">
-                            <i class="fas fa-bars"></i>
+                            <i class="fa fa-bars" id="icon-menu"></i>
                         </button>
                     </div>
                         

@@ -671,6 +671,31 @@ textarea {
     height: 300px;
 }
 
+/*CARD*/
+.card {
+    box-shadow: 2px 2px 12px #ccc;
+    transition: 500ms ease-in-out
+}
+.card:hover {
+    box-shadow: 2px 2px 20px #222;
+    cursor: pointer;
+}
+
+/*icone menu*/
+#icon-menu {
+    color: #fff;
+    font-size: 50px;
+}
+
+.item a {
+    color: #35363A;
+    text-decoration: none;
+}
+
+.item a:visited {
+    color: #35363A;
+    text-decoration: none;
+}
 
 
 /*RESPONSIVE*/ 

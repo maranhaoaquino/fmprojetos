@@ -8,29 +8,29 @@
                 <div class="container mt-5">
                     <form action="https://formsubmit.co/will.santos97@hotmail.com" class="d-flex flex-column align-items-center" method="POST">
                             <div class="row mb-3">
-                                <div class="col-10 col-sm-4 d-flex flex-column ">
+                                <div class="col-12 col-sm-4 d-flex flex-column ">
                                     <label class="label-form" for="nome">Nome: </label>                        
                                     <input type="text" name="nome" id="nome" placeholder="Seu Nome" class="input-type-a" required>
                                 </div>
             
-                                <div class="col-10 col-sm-4 d-flex flex-column ">
+                                <div class="col-12 col-sm-4 d-flex flex-column ">
                                     <label class="label-form" for="email">Email: </label>
                                     <input type="email" name="email" id="email" class="input-type-a" placeholder="seuemail@email.com" required>
                                 </div>
             
-                                <div class="col-10 col-sm-4 d-flex flex-column ">
+                                <div class="col-12 col-sm-4 d-flex flex-column ">
                                     <label class="label-form" for="celular">Celular: </label>
                                     <input type="celular" name="celular" id="celular" placeholder="(99) 99999-9999" class="input-type-a">
                                 </div>
                             </div>
-                            <div class="row mt-3 mb-3">
-                                <div class="col-10 d-flex flex-column ">
+                            <div class="row mt-3 mb-3 w-100">
+                                <div class="w-100 d-flex flex-column p-0">
                                     <label class="label-form" for="">Mensagem:</label>
                                     <textarea name="mensagem" id="textAreaCustom" class="w-100"  required></textarea>
                                 </div>      
                             </div>
-                            <div class="row mt-3">
-                                <div class="col-10 col-sm-6 d-flex justify-content-center">
+                            <div class="row mt-3 w-100">
+                                <div class="col-10 col-sm-6 d-flex p-0 justify-content-center">
                                     <button type="submit"  class="btn-enviar w-100">Enviar</button>
                                 </div>
                             </div>                    
