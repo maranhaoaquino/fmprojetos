@@ -63,7 +63,7 @@
 
                 <div class="row mt-3 justify-content-center">
                     <div class="col-8 col-sm-4">
-                        <a class="btn btn-primary btn-black-home">
+                        <a href="https://fmequipamentos.com.br/?tipo_de_produto=todos-produtos" class="btn btn-primary btn-black-home">
                             Veja nossos Produtos
                         </a>
                     </div>
@@ -101,7 +101,7 @@
                         <h2 class="titulo-fale-conosco ">Faça seu projeto conosco</h2>                    
                     </div>   
                     <div class="col-8 col-sm-4 mt-3">
-                        <a class="btn btn-primary btn-black-home">
+                        <a href="#contato-email" class="btn btn-primary btn-black-home">
                             Fale com a gente
                         </a>
                     </div>
@@ -139,7 +139,7 @@
                 </div>
                 <div class="row mt-3 justify-content-center">
                     <div class="col-8 col-sm-4">
-                        <a class="btn btn-primary btn-black-home">
+                        <a href="https://fmequipamentos.com.br/?tipo_de_projeto=todos-os-projetos" class="btn btn-primary btn-black-home">
                             Veja nossos Projetos
                         </a>
                     </div>

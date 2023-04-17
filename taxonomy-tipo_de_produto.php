@@ -35,10 +35,10 @@ $term = get_term_by( 'slug', get_query_var( 'term' ), get_query_var( 'taxonomy' 
 
       <?php else: ?>
 
-      <h2 class="post-title">No News in <?php echo apply_filters( 'the_title', $term->name ); ?></h2>
+      <h2 class="post-title">Sem produtos <?php echo apply_filters( 'the_title', $term->name ); ?></h2>
       <div class="content clearfix">
         <div class="entry">
-          <p>It seems there isn't anything happening in <strong><?php echo apply_filters( 'the_title', $term->name ); ?></strong> right now. Check back later, something is bound to happen soon.</p>
+          <p>Produto em <strong><?php echo apply_filters( 'the_title', $term->name ); ?></strong> não encontrados</p>
         </div>
       </div>
 

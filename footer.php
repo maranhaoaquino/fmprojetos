@@ -6,7 +6,7 @@
                     <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100px" viewBox="0 0 1280 140" preserveAspectRatio="none"><g fill="#ffffff"><path d="M640 140L1280 0H0z" fill-opacity=".5"/><path d="M640 98l640-98H0z"/></g></svg>
                 </div>
                 <div class="container mt-5">
-                    <form action="https://formsubmit.co/will.santos97@hotmail.com" class="d-flex flex-column align-items-center" method="POST">
+                    <form id="contato-email" action="https://formsubmit.co/will.santos97@hotmail.com" class="d-flex flex-column align-items-center" method="POST">
                             <div class="row mb-3">
                                 <div class="col-12 col-sm-4 d-flex flex-column ">
                                     <label class="label-form" for="nome">Nome: </label>                        
@@ -51,15 +51,23 @@
                                 </a>
                             </li>
                             <li>
-                                <i class="fa fa-facebook-official" aria-hidden="true"></i>
+                                <a href="<?php the_field_cmb2('facebook', $contatos); ?>" target="_blank">
+                                    <i class="fa fa-facebook-official" aria-hidden="true"></i>
+                                </a>
                             </li>
                         </ul>
                     </div>
                 </div>
             </section>        
     </footer>
+    <?php
+		$whatsapp = str_replace('(', '', the_field_cmb2('whatsapp', $contatos));
+		$whatsapp1 = str_replace(')', '', $whatsapp);
+		$whatsapp2 = str_replace('-', '', $whatsapp1);
+		$whatsapp3 = str_replace(' ', '', $whatsapp2);
+	?>
     <div class="whatsapp">
-        <a href="https://wa.me/5571993295049" target="_blank"> <img src="<?php echo get_template_directory_uri(); ?>/img/zapquadrado.png" alt="botão whatsapp"></a>
+        <a href="https://api.whatsapp.com/send?phone=55<?php echo $whatsapp3; ?>&text=Quero%20realizar%20um%20orçamento" target="_blank"> <img src="<?php echo get_template_directory_uri(); ?>/img/zapquadrado.png" alt="botão whatsapp"></a>
     </div>
     <?php wp_footer(); ?>
 </body>

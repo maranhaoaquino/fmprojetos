@@ -26,7 +26,7 @@
                 <div class="col-12 col-sm-3 d-flex align-items-center">
                     <!-- ESPACO PARA LOGO -->
                     <div class="logo">
-                        <a href="<?php echo get_home_url(); ?>" target="_blank" >
+                        <a href="<?php echo get_home_url(); ?>">
                             <?php
                                 $custom_logo_id = get_theme_mod( 'custom_logo' );
                                 $logo = wp_get_attachment_image_src( $custom_logo_id , 'full' );
