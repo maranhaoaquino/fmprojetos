@@ -6,3 +6,5 @@ function removeCollapse() {
 
 
 
+let wpp = document.querySelector("#apiWpp")
+wpp.getAttribute("href", "https://api.whatsapp.com/send?phone=5571993295049");

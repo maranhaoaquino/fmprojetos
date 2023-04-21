@@ -7,7 +7,7 @@
                 </div>
                 <div class="container mt-5">
                     <form id="contato-email" action="https://formsubmit.co/will.santos97@hotmail.com" class="d-flex flex-column align-items-center" method="POST">
-                            <div class="row mb-3">
+                            <div class="row mb-3 w-100">
                                 <div class="col-12 col-sm-4 d-flex flex-column ">
                                     <label class="label-form" for="nome">Nome: </label>                        
                                     <input type="text" name="nome" id="nome" placeholder="Seu Nome" class="input-type-a" required>
@@ -24,13 +24,13 @@
                                 </div>
                             </div>
                             <div class="row mt-3 mb-3 w-100">
-                                <div class="w-100 d-flex flex-column p-0">
+                                <div class="col-12 d-flex flex-column">
                                     <label class="label-form" for="">Mensagem:</label>
                                     <textarea name="mensagem" id="textAreaCustom" class="w-100"  required></textarea>
                                 </div>      
                             </div>
                             <div class="row mt-3 w-100">
-                                <div class="col-10 col-sm-6 d-flex p-0 justify-content-center">
+                                <div class="col-10 col-sm-6 d-flex justify-content-center">
                                     <button type="submit"  class="btn-enviar w-100">Enviar</button>
                                 </div>
                             </div>                    
@@ -67,8 +67,9 @@
 		$whatsapp3 = str_replace(' ', '', $whatsapp2);
 	?>
     <div class="whatsapp">
-        <a href="https://api.whatsapp.com/send?phone=55<?php echo $whatsapp3; ?>&text=Quero%20realizar%20um%20orçamento" target="_blank"> <img src="<?php echo get_template_directory_uri(); ?>/img/zapquadrado.png" alt="botão whatsapp"></a>
+        <a id="apiWpp" href="https://api.whatsapp.com/send?phone=55<?php echo $whatsapp3;?>&text=Testando%20api" target="_blank"> <img src="<?php echo get_template_directory_uri(); ?>/img/zapquadrado.png" alt="botão whatsapp"></a>
     </div>
+    
     <?php wp_footer(); ?>
 </body>
 </html>
