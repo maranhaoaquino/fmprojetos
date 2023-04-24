@@ -188,6 +188,7 @@ header {
     object-fit: cover;
     height: 100%;
     width: 100%;
+    min-height: 414.21px;
 }
 
 .card-body {
