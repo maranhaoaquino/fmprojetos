@@ -36,16 +36,15 @@
                     ],
                 });
             </script>
-            <!-- PRODUTOS -->
+            <!-- PROJETOS -->
             <div class="container mt-5">
                 <div class="row text-center">
-                    <h2 class="titulo-home">Nossos <span class="bold-titulo">Produtos</span></h2>
-                </div>
-                <!-- ESPAÇO PARA OS CARD DOS PRODUTOS -->
+                    <h2 class="titulo-home">Projetos <span class="bold-titulo">Realizados</span></h2> 
+                </div>               
                 <div class="row mt-3 gy-4">
                     <?php
                         $args = array (
-                            'post_type' => 'produtos',
+                            'post_type' => 'projetos',
                             'orderby' => 'ID',
                             'order'   => 'DESC',
                             'nopaging' => false,
@@ -54,21 +53,52 @@
                         );
                         $the_query = new WP_Query ( $args );
                     ?>
-
                     <?php if ( $the_query->have_posts() ) : while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
-                        <?php include(TEMPLATEPATH . "/inc/card-produtos.php"); ?>
+                        <a href="<?php the_permalink(); ?>" rel="bookmark" class="col-6 col-md-4">
+                            <div id="post-<?php the_ID(); ?>" <?php post_class('post clearfix'); ?>>
+                                <?php $slide_projeto = get_field_cmb2('slide_projeto'); 
+                                    if(!empty($slide_projeto)) {
+                                ?>
+                                    <img src="<?php echo $slide_projeto[0]['foto_projeto'] ?>" class="img-projetos">
+                                <?php } ?>
+                            </div>
+                        </a>
                     <?php endwhile; else: endif; ?>
                     <?php wp_reset_query(); wp_reset_postdata(); ?>
                 </div>
-
                 <div class="row mt-3 justify-content-center">
                     <div class="col-8 col-sm-4">
-                        <a href="https://fmequipamentos.com.br/?tipo_de_produto=todos-produtos" class="btn btn-primary btn-black-home">
-                            Veja nossos Produtos
+                        <a href="/?tipo_de_projeto=todos-os-projetos" class="btn btn-primary btn-black-home">
+                            Veja nossos Projetos
                         </a>
                     </div>
                 </div>
             </div>
+            <!-- PARCEIROS -->
+            <?php $parceiros = get_page_by_title('Nossos Parceiros')->ID; ?>
+            <?php $marca_parceiro = get_field_cmb2('marca_parceiro', $parceiros); 
+                if(!empty($marca_parceiro)) {
+            ?>
+                <div class="container mt-5">
+                    <div class="row text-center">
+                        <h2 class="titulo-home">Nossos <span class="bold-titulo">Parceiros</span></h2>
+                    </div>
+                    <div class="row mt-3">
+                        <div id="slide-parceiros" class="owl-carousel owl-theme carrossel--home">
+                            <?php foreach($marca_parceiro as $slide) { ?>
+                                <?php if(!empty($slide['logo_parceiro'])){?>
+                                    <div class="item">
+                                        <a <?php if(!empty($slide['link_parceiro'])){?>href="<?php echo $slide['link_parceiro'] ?>"<?php } else { ?>href="#"<?php } ?>>
+                                            <img src="<?php echo $slide['logo_parceiro'] ?>">
+                                            <?php if(!empty($slide['nome_parceiro'])){?><h3><?php echo $slide['nome_parceiro'] ?></h3><?php } ?>
+                                        </a>
+                                    </div>
+                                <?php } ?>
+                            <?php } ?>
+                        </div>
+                    </div>
+                </div>
+            <?php } ?>
             <!-- Qualidade -->
             <?php $vantagens = get_field_cmb2('vantagens'); 
                     if(!empty($vantagens)) {
@@ -107,15 +137,16 @@
                     </div>
                 </div>
             </div>
-            <!-- PROJETOS -->
+            <!-- PRODUTOS -->
             <div class="container mt-5">
                 <div class="row text-center">
-                    <h2 class="titulo-home">Projetos <span class="bold-titulo">Realizados</span></h2> 
-                </div>               
+                    <h2 class="titulo-home">Nossos <span class="bold-titulo">Produtos</span></h2>
+                </div>
+                <!-- ESPAÇO PARA OS CARD DOS PRODUTOS -->
                 <div class="row mt-3 gy-4">
                     <?php
                         $args = array (
-                            'post_type' => 'projetos',
+                            'post_type' => 'produtos',
                             'orderby' => 'ID',
                             'order'   => 'DESC',
                             'nopaging' => false,
@@ -124,52 +155,21 @@
                         );
                         $the_query = new WP_Query ( $args );
                     ?>
+
                     <?php if ( $the_query->have_posts() ) : while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
-                        <a href="<?php the_permalink(); ?>" rel="bookmark" class="col-6 col-md-4">
-                            <div id="post-<?php the_ID(); ?>" <?php post_class('post clearfix'); ?>>
-                                <?php $slide_projeto = get_field_cmb2('slide_projeto'); 
-                                    if(!empty($slide_projeto)) {
-                                ?>
-                                    <img src="<?php echo $slide_projeto[0]['foto_projeto'] ?>" class="img-projetos">
-                                <?php } ?>
-                            </div>
-                        </a>
+                        <?php include(TEMPLATEPATH . "/inc/card-produtos.php"); ?>
                     <?php endwhile; else: endif; ?>
                     <?php wp_reset_query(); wp_reset_postdata(); ?>
                 </div>
+
                 <div class="row mt-3 justify-content-center">
                     <div class="col-8 col-sm-4">
-                        <a href="https://fmequipamentos.com.br/?tipo_de_projeto=todos-os-projetos" class="btn btn-primary btn-black-home">
-                            Veja nossos Projetos
+                        <a href="/?tipo_de_produto=todos-produtos" class="btn btn-primary btn-black-home">
+                            Veja nossos Produtos
                         </a>
                     </div>
                 </div>
             </div>
-            <!-- PARCEIROS -->
-            <?php $parceiros = get_page_by_title('Nossos Parceiros')->ID; ?>
-            <?php $marca_parceiro = get_field_cmb2('marca_parceiro', $parceiros); 
-                if(!empty($marca_parceiro)) {
-            ?>
-                <div class="container mt-5">
-                    <div class="row text-center">
-                        <h2 class="titulo-home">Nossos <span class="bold-titulo">Parceiros</span></h2>
-                    </div>
-                    <div class="row mt-3">
-                        <div id="slide-parceiros" class="owl-carousel owl-theme carrossel--home">
-                            <?php foreach($marca_parceiro as $slide) { ?>
-                                <?php if(!empty($slide['logo_parceiro'])){?>
-                                    <div class="item">
-                                        <a <?php if(!empty($slide['link_parceiro'])){?>href="<?php echo $slide['link_parceiro'] ?>"<?php } else { ?>href="#"<?php } ?>>
-                                            <img src="<?php echo $slide['logo_parceiro'] ?>">
-                                            <?php if(!empty($slide['nome_parceiro'])){?><h3><?php echo $slide['nome_parceiro'] ?></h3><?php } ?>
-                                        </a>
-                                    </div>
-                                <?php } ?>
-                            <?php } ?>
-                        </div>
-                    </div>
-                </div>
-            <?php } ?>
             <!-- Clientes -->
             <?php $clientes = get_page_by_title('Nossos Clientes')->ID; ?>
             <?php $marca_cliente = get_field_cmb2('marca_cliente', $clientes); 

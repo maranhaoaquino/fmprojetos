@@ -3,21 +3,31 @@
 ?>
 <?php get_header(); ?>
 <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-    <main class="template-middle">
-        <h2><?php echo the_title(''); ?></h2>      
-        <section  class="section-logos">
-            <div class="four-logos">
+    <main>
+        <section class="container mt-5">
+            <div class="row text-center">
+                <h2><?php echo the_title(''); ?></h2>
+            </div>
+        </section>     
+        <section  class="container mt-3">
+            <div class="row">
                 <?php $marca_parceiro = get_field_cmb2('marca_parceiro'); if(!empty($marca_parceiro)) { ?>
                         <?php foreach($marca_parceiro as $parceiro) { ?>
-                            <a href="<?php echo $parceiro['link_parceiro'] ?>">
-                                <img src="<?php echo $parceiro['logo_parceiro'] ?>" alt="<?php echo $parceiro['nome_parceiro'] ?>">
-                            </a>
+                            <?php if(!empty($parceiro['logo_parceiro'])) { ?>
+                            <div class="col-6 col-sm-3">
+                                <a href="<?php if(!empty($parceiro['link_parceiro'])) { ?><?php echo $parceiro['link_parceiro'] ?><?php } ?>">
+                                    <img src="<?php echo $parceiro['logo_parceiro'] ?>" alt="<?php if(!empty($parceiro['nome_parceiro'])) { ?><?php echo $parceiro['nome_parceiro'] ?><?php } ?>">
+                                </a>
+                            </div>
+                            <?php } ?>
                         <?php } ?>
                 <?php } ?>
             </div>
         </section>
-        <section>
-            <?php the_content(); ?>
+        <section class="container mt-3">
+            <div class="row justify-content-center">
+                <?php the_content(); ?>
+            </div>
         </section>
     </main>
 <?php endwhile; endif; ?>

@@ -3,21 +3,31 @@
 ?>
 <?php get_header(); ?>
 <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-    <main class="template-middle">
-        <h2><?php echo the_title(''); ?></h2>        
-        <section  class="section-logos">
-            <div class="four-logos">
-                <?php $marca_cliente = get_field_cmb2('marca_cliente'); if(isset($marca_cliente)) { ?>
+    <main>
+        <section class="container mt-5">
+            <div class="row text-center">
+                <h2><?php echo the_title(''); ?></h2>
+            </div>
+        </section>        
+        <section class="container mt-3">
+            <div class="row">
+                <?php $marca_cliente = get_field_cmb2('marca_cliente'); if(!empty($marca_cliente)) { ?>
                         <?php foreach($marca_cliente as $cliente) { ?>
-                            <a href="<?php echo $cliente['link_cliente'] ?>">
-                                <img src="<?php echo $cliente['logo_cliente'] ?>" alt="<?php echo $cliente['nome_cliente'] ?>">
-                            </a>
+                            <?php if(!empty($cliente['logo_cliente'])) { ?>
+                                <div class="col-6 col-sm-3">
+                                    <a href="<?php if(!empty($cliente['link_cliente'])) { ?><?php echo $cliente['link_cliente'] ?><?php } ?>">
+                                        <img src="<?php echo $cliente['logo_cliente'] ?>" alt="<?php if(!empty($cliente['nome_cliente'])) { ?><?php echo $cliente['nome_cliente'] ?><?php } ?>">
+                                    </a>
+                                </div>
+                            <?php } ?>
                         <?php } ?>
                 <?php } ?>
             </div>
         </section>
-        <section>
-            <?php the_content(); ?>
+        <section class="container mt-3">
+            <div class="row justify-content-center">
+                <?php the_content(); ?>
+            </div>
         </section>
     </main>
 <?php endwhile; endif; ?>
