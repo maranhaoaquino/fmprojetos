@@ -18,13 +18,13 @@ $term = get_term_by( 'slug', get_query_var( 'term' ), get_query_var( 'taxonomy' 
         <div class="row">
           <a href="<?php the_permalink(); ?>" rel="bookmark">
             <div id="post-<?php the_ID(); ?>" <?php post_class('post clearfix'); ?>>
-              <div class="text-align-start">
+              <div class="text-align-start mt-3">
                 <h3><a href="<?php the_permalink(); ?>" rel="bookmark"><?php the_title(); ?></a></h3>
               </div>
               <?php $slide_projeto = get_field_cmb2('slide_projeto'); 
                   if(!empty($slide_projeto)) {
               ?>
-                <div class="slide-projeto owl-carousel owl-theme">
+                <div class="slide-projeto owl-carousel owl-theme mt-3">
                   <?php foreach($slide_projeto as $slide) { ?>
                     <div class="item">
                       <img src="<?php echo $slide['foto_projeto'] ?>">
@@ -62,18 +62,18 @@ $term = get_term_by( 'slug', get_query_var( 'term' ), get_query_var( 'taxonomy' 
       loop:false,
       nav:true,
       dots: true,
+      navText: [
+        "<i class='fa fa-chevron-left'></i>",
+        "<i class='fa fa-chevron-right'></i>"
+      ],
       responsive:{
         0:{
-          items: 3,
+          items: 2,
           margin: 10
         },
         711:{
           items: 4,
           margin: 20
-        },
-        1023:{
-          items: 6,
-          margin: 30
         }
       }
     });

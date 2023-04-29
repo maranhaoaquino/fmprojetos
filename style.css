@@ -26,7 +26,7 @@ a {
 }
 /* HEADER */
 header {        
-    background: #35363A;
+    background: #35363A;    
 }
 .logo a{
     color: #fff;
@@ -468,7 +468,13 @@ header {
 .contatos {    
     padding: 30px;
     background: #e6e6e6;
-    border-radius: 0 24px 24px 0;    
+    border-radius: 24px 24px 24px 24px;
+    box-shadow: 2px 2px 12px #ccc;
+    transition: 500ms ease-in-out
+}
+
+.contatos:hover {
+    box-shadow: 2px 2px 20px #222;
 }
 
 
@@ -777,3 +783,12 @@ textarea {
 
     
 }
+
+/* //UTILITIES */
+/*29/04/2023*/
+.border-img {
+    box-shadow: 2px 4px 12px #bbb;
+    border-radius: 6px;
+}
+
+

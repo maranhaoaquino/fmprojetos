@@ -3,31 +3,42 @@
 ?>
 <?php get_header(); ?>
 <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-    <main class="template-middle">
-        <section class="produto-principal">
-            <div class="img-produto">
-                <img src="<?php the_field_cmb2('imagem_principal_produto') ?>">
-            </div>
-            <div class="descricao-produto">
-                <h2 class="title-produto"><?php the_title(); ?></h2>
-                <div class="description-produto"><?php the_content();  ?></div>
-            </div>
-        </section>
-        <section class="produtos-secundarios">
-            <?php $produtos_adicionais = get_field_cmb2('produtos_adicionais'); if(!empty($produtos_adicionais)) { ?>
-                <h3><?php the_title(); ?></h3>
-                <div class="area-produtos-secundarios">
-                    <?php foreach($produtos_adicionais as $produto) { ?>
-                        <div class="card-produtos-secundarios">
-                            <img src="<?php echo $produto['imagem_adicional'] ?>" width="222px" height="222px">
-                            <p><?php echo $produto['descricao_adicional'] ?></p>
-                        </div>                        
-                        <?php } ?>
-            
+    <main>
+        <section class="container mt-5">
+            <div class="row justify-content-center text-center ">
+                <div class="col-12 col-sm-6">
+                    <div class="border-img">
+                        <img  src="<?php the_field_cmb2('imagem_principal_produto') ?>" width="100%" >
+                    </div>
                 </div>
-            <?php } ?>
+                <div class="col-12 col-sm-6  d-flex flex-wrap align-items-start mt-5 p-5">
+                        <div>
+                            <h2 ><?php the_title(); ?></h2>
+                            <?php the_content();  ?>
+                        </div>
+                    
+                </div>            
+            </div>
         </section>
-
+        <?php $produtos_adicionais = get_field_cmb2('produtos_adicionais'); if(!empty($produtos_adicionais)) { ?>
+        <section class="container mt-5">
+            <div class="row justify-content-center text-center mt-3">
+                    <h3><?php the_title(); ?></h3>
+            </div>
+        </section>
+        <section class="container mt-5">
+        <div class="row">
+            <?php foreach($produtos_adicionais as $produto) { ?>
+                <div class="col-sm-6 col-12">
+                    <div class="card-produtos-secundarios border-img m-2">
+                        <img src="<?php echo $produto['imagem_adicional'] ?>" width="222px" height="222px">
+                        <p><?php echo $produto['descricao_adicional'] ?></p>
+                    </div>
+                </div>
+                <?php } ?>
+            </div>
+        </section>
+        <?php } ?>
     </main>
 <?php endwhile; endif; ?>
 <?php get_footer(); ?>

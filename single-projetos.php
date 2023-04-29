@@ -33,7 +33,6 @@
         loop:false,
         nav:true,
         dots: true,
-        autoWidth:true,
         responsive:{
             0:{
                 items: 3,
