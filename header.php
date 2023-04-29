@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/owl.carousel.min.css">
     <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/owl.theme.default.min.css">
     <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/bootstrap.min.css">
-    <title><?php bloginfo('name'); ?></title>
+    <title><?php echo the_title(''); ?> | <?php bloginfo('name'); ?></title>
     <script src="https://use.fontawesome.com/bf7a872587.js"></script>
     
     <script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/js/jquery-3.6.3.min.js"></script>

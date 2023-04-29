@@ -6,7 +6,7 @@ get_header();
 $term = get_term_by( 'slug', get_query_var( 'term' ), get_query_var( 'taxonomy' ) );
 ?>
 
-  <main class="container">
+  <main class="template-middle">
     <h2 class="archive-title"><?php echo apply_filters( 'the_title', $term->name ); ?></h2>
     <div class="carrosseis-projetos">
       <?php if ( have_posts() ): while ( have_posts() ): the_post(); ?>
@@ -29,7 +29,7 @@ $term = get_term_by( 'slug', get_query_var( 'term' ), get_query_var( 'taxonomy' 
         </div>
       </a>
       <?php endwhile; ?>
-                <!-- daquipracima -->
+
       <div class="navigation clearfix">
         <div class="alignleft"><?php next_posts_link('« Previous Entries') ?></div>
         <div class="alignright"><?php previous_posts_link('Next Entries »') ?></div>
@@ -52,7 +52,6 @@ $term = get_term_by( 'slug', get_query_var( 'term' ), get_query_var( 'taxonomy' 
       loop:false,
       nav:true,
       dots: true,
-      autoWidth: true,
       responsive:{
         0:{
           items: 3,

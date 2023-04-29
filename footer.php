@@ -6,7 +6,7 @@
                     <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100px" viewBox="0 0 1280 140" preserveAspectRatio="none"><g fill="#ffffff"><path d="M640 140L1280 0H0z" fill-opacity=".5"/><path d="M640 98l640-98H0z"/></g></svg>
                 </div>
                 <div class="container mt-5">
-                    <form id="contato-email" action="https://formsubmit.co/will.santos97@hotmail.com" class="d-flex flex-column align-items-center" method="POST">
+                    <form id="contato-email" action="<?php echo get_template_directory_uri(); ?>/enviar.php" class="d-flex flex-column align-items-center" method="POST">
                             <div class="row mb-3 w-100">
                                 <div class="col-12 col-sm-4 d-flex flex-column ">
                                     <label class="label-form" for="nome">Nome: </label>                        
@@ -19,8 +19,8 @@
                                 </div>
             
                                 <div class="col-12 col-sm-4 d-flex flex-column ">
-                                    <label class="label-form" for="celular">Celular: </label>
-                                    <input type="celular" name="celular" id="celular" placeholder="(99) 99999-9999" class="input-type-a">
+                                    <label class="label-form" for="telefone">Celular: </label>
+                                    <input type="celular" name="telefone" id="telefone" placeholder="(99) 99999-9999" class="input-type-a">
                                 </div>
                             </div>
                             <div class="row mt-3 mb-3 w-100">
@@ -45,30 +45,36 @@
                     <div class="col-6 d-flex justify-content-end">
                         <ul class="lista-icones">
                             <?php $contatos = get_page_by_title('contatos')->ID; ?>
+                            <?php if(!empty(get_field_cmb2('instagram', $contatos))){ ?>
                             <li>
                                 <a href="<?php the_field_cmb2('instagram', $contatos); ?>" target="_blank">
                                     <i class="fa fa-instagram" aria-hidden="true"></i>
                                 </a>
                             </li>
+                            <?php } ?>
+                            <?php if(!empty(get_field_cmb2('instagram', $contatos))){ ?>
                             <li>
                                 <a href="<?php the_field_cmb2('facebook', $contatos); ?>" target="_blank">
                                     <i class="fa fa-facebook-official" aria-hidden="true"></i>
                                 </a>
                             </li>
+                            <?php } ?>
                         </ul>
                     </div>
                 </div>
             </section>        
     </footer>
     <?php
-		$whatsapp = str_replace('(', '', the_field_cmb2('whatsapp', $contatos));
+		$whatsapp = str_replace('(', '', get_field_cmb2('whatsapp', $contatos));
 		$whatsapp1 = str_replace(')', '', $whatsapp);
 		$whatsapp2 = str_replace('-', '', $whatsapp1);
 		$whatsapp3 = str_replace(' ', '', $whatsapp2);
 	?>
+    <?php if(!empty($whatsapp3)){ ?>
     <div class="whatsapp">
         <a id="apiWpp" href="https://api.whatsapp.com/send?phone=55<?php echo $whatsapp3;?>&text=Testando%20api" target="_blank"> <img src="<?php echo get_template_directory_uri(); ?>/img/zapquadrado.png" alt="botão whatsapp"></a>
     </div>
+    <?php } ?>
     
     <?php wp_footer(); ?>
 </body>
