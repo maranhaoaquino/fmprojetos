@@ -6,6 +6,9 @@
                     <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100px" viewBox="0 0 1280 140" preserveAspectRatio="none"><g fill="#ffffff"><path d="M640 140L1280 0H0z" fill-opacity=".5"/><path d="M640 98l640-98H0z"/></g></svg>
                 </div>
                 <div class="container mt-5">
+                    <div class="row mt-3 mb-3 text-center">
+                        <h2>FALE COM UM ESPECIALISTA</h2>
+                    </div>
                     <form id="contato-email" action="<?php echo get_template_directory_uri(); ?>/enviar.php" class="d-flex flex-column align-items-center" method="POST">
                             <div class="row mb-3 w-100">
                                 <div class="col-12 col-sm-4 d-flex flex-column ">

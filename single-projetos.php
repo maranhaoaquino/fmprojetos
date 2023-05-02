@@ -43,7 +43,7 @@
                 margin: 20
             },
             1023:{
-                items: 6,
+                items: 4,
                 margin: 30
             }
         }

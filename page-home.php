@@ -39,7 +39,8 @@
             <!-- PROJETOS -->
             <div class="container mt-5">
                 <div class="row text-center">
-                    <h2 class="titulo-home">Projetos <span class="bold-titulo">Realizados</span></h2> 
+                    <h2 class="titulo-home">Projetos <span class="bold-titulo">Realizados</span></h2>
+                    <p>A FM Equipamentos tem como foco instalações comerciais para pequenos, médios e grandes empreendimentos. Usando tecnologia de ponta e os melhores profissionais do mercado, entregamos para o cliente mais do que uma instalação comercial: entregamos a chave do sucesso do seu empreendimento!</p>
                 </div>               
                 <div class="row mt-3 gy-4">
                     <?php

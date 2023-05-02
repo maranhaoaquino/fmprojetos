@@ -29,7 +29,7 @@
         <section class="container mt-5">
         <div class="row">
             <?php foreach($produtos_adicionais as $produto) { ?>
-                <div class="col-sm-6 col-12">
+                <div class="col-12 col-md-6">
                     <div class="card-produtos-secundarios border-img m-2">
                         <img src="<?php echo $produto['imagem_adicional'] ?>" width="222px" height="222px">
                         <p><?php echo $produto['descricao_adicional'] ?></p>
