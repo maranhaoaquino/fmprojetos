@@ -110,7 +110,7 @@
                     </div>
                     <div class="row mt-4">
                         <?php foreach($vantagens as $vantagem) { ?>
-                            <div class="col-4 col-sm-3">
+                            <div class="col-6 col-sm-3">
                                 <div class="card-qualidades">
                                     <?php if(!empty($vantagem['img_vantagens'])){ ?><img src="<?php echo $vantagem['img_vantagens']; ?>"><?php } ?>
                                     <?php if(!empty($vantagem['title_vantagens'])){ ?><h4 class="text-center"><?php echo $vantagem['title_vantagens']; ?></h4><?php } ?>

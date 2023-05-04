@@ -1,4 +1,4 @@
-<div class="col-6 col-md-4">
+<div class="col-12 col-md-4">
     <a href="<?php the_permalink(); ?>" rel="bookmark">
         <div class="card card-produto" id="post-<?php the_ID(); ?>" <?php post_class('post clearfix'); ?>>
             <div class="card-header">

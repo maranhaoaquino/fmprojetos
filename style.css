@@ -709,6 +709,34 @@ textarea {
     text-decoration: none;
 }
 
+.img-project {
+    height: 300px;
+    object-fit: cover;
+    
+}
+
+.img-project img {
+    height: 100%;
+}
+
+.remove-text-decoration {
+    text-decoration: none;
+    color: #35363A;
+}
+
+.remove-text-decoration:visited {
+    text-decoration: none;
+    color: #35363A;
+}
+
+.img-parceiro {
+    width: 100%;
+}
+
+.text-center {
+    text-align: center;
+}
+
 
 /*RESPONSIVE*/ 
 @media (max-width: 768px) {
@@ -779,6 +807,26 @@ textarea {
 
     .img-projetos {
         height: 250px;
+    }
+
+
+    #grid-slider {
+        top: 25%;
+        left: 4%;
+        width: 69%;
+    }
+
+    #grid-slider h2 {
+        font-size: 26px;
+    }
+
+    #grid-slider p {
+        font-size: 14px;
+    }
+
+    .img-project {
+        height: 200px;
+        object-fit: cover;
     }
 
     
