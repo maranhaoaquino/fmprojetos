@@ -44,32 +44,5 @@ function cmb2_fields_home() {
       'id' => 'link_slide',
       'type' => 'text_url',
     ]);
-
-    $vantagens = $cmb->add_field([
-      'name' => 'Vantagens',
-      'id' => 'vantagens',
-      'type' => 'group',
-      'repeatable' => true,
-      'options' => [
-        'sortable' => true,
-        'add_button' => 'Adicionar',
-        'remove_button' => 'Remover',
-      ],
-    ]);
-    $cmb->add_group_field($vantagens, [
-      'name' => 'Image',
-      'id' => 'img_vantagens',
-      'type' => 'file',
-    ]);
-    $cmb->add_group_field($vantagens, [
-      'name' => 'Titulo',
-      'id' => 'title_vantagens',
-      'type' => 'text',
-    ]);
-    $cmb->add_group_field($vantagens, [
-      'name' => 'Subtitulo',
-      'id' => 'subtitle_vantagens',
-      'type' => 'text',
-    ]);
 }
 ?>

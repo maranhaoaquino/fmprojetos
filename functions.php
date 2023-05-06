@@ -49,36 +49,6 @@ function custom_post_type_produtos() {
         ),
         'taxonomies' => array('tipo_de_produtos')
 	));
-    register_post_type('projetos', array(
-		'label' => 'Projetos',
-		'description' => 'Projetos',
-		'public' => true,
-		'show_ui' => true,
-		'show_in_menu' => true,
-		'capability_type' => 'post',
-		'map_meta_cap' => true,
-		'hierarchical' => false,
-		'rewrite' => array('slug' => 'projetos', 'with_front' => true),
-		'query_var' => true,
-		'supports' => array('title', 'editor', 'page-attributes','post-formats'),
-        'show_in_rest' => true,
-		'labels' => array (
-			'name' => 'Projetos',
-			'singular_name' => 'Projeto',
-			'menu_name' => 'Projeto',
-			'add_new' => 'Adicionar Novo',
-			'add_new_item' => 'Adicionar Novo Projeto',
-			'edit' => 'Editar',
-			'edit_item' => 'Editar Projeto',
-			'new_item' => 'Novo Projeto',
-			'view' => 'Ver Projeto',
-			'view_item' => 'Ver Projeto',
-			'search_items' => 'Procurar Projetos',
-			'not_found' => 'Nenhum Projeto Encontrado',
-			'not_found_in_trash' => 'Nenhum Projeto Encontrado no Lixo',
-        ),
-        'taxonomies' => array('projetos')
-	));
 }
 add_action('init', 'custom_post_type_produtos');
 
@@ -108,30 +78,6 @@ function create_custom_tax_tipo(){
         'show_admin_column' => true,
         'query_var' => true,
         'rewrite' => array( 'slug' => 'produtos' ),
-    );
-    register_taxonomy( $custom_tax_nome, $custom_post_type_nome, $args );
-
-    $custom_tax_nome = 'tipo_de_projeto';
-    $custom_post_type_nome = 'projetos';
-    $labels = array(
-        'name' => _x( 'Classificações', 'taxonomy general name' ),
-        'singular_name' => _x( 'Classificação', 'taxonomy singular name' ),
-        'search_items' =>  __( 'Procurar' ),
-        'all_items' => __( 'Todos' ),
-        'edit_item' => __( 'Editar' ), 
-        'update_item' => __( 'Update' ),
-        'add_new_item' => __( 'Adicionar Classificação' ),
-        'new_item_name' => __( 'Nova Classificação' ),
-        'menu_name' => __( 'Classificação' ),
-    );  
-    $args = array(
-        'labels' => $labels,
-        'hierarchical' => true,
-        'show_ui' => true,
-        'show_in_rest' => true,
-        'show_admin_column' => true,
-        'query_var' => true,
-        'rewrite' => array( 'slug' => 'projetos' ),
     );
     register_taxonomy( $custom_tax_nome, $custom_post_type_nome, $args );
 }
