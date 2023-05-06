@@ -39,18 +39,24 @@
                         </a>
                     </div>
                 </div>
-                <div class="col-12 col-sm-9 d-flex align-items-center">
+                <div class="col-12 col-sm-9 d-flex align-items-center" id="navegacao-pai">
                     <!-- NAVEGAÇÃO -->
-                    <nav id="nav-list">
-                        <?php
-                            $args = array(
-                                'menu' => 'principal',
-                                'theme_location' => 'menu-principal',
-                                'container' => false
-                            );
-                            wp_nav_menu( $args );
-                        ?>
-                    </nav>
+                    <div class="col-12">
+                        <h2 class="header-h2">O Melhor em Equipamentos para o seu Negocio.</h2>
+                    </div>
+                    <div id="navegacao-filho">
+                        <nav id="nav-list">
+    
+                            <?php
+                                $args = array(
+                                    'menu' => 'principal',
+                                    'theme_location' => 'menu-principal',
+                                    'container' => false
+                                );
+                                wp_nav_menu( $args );
+                            ?>
+                        </nav>
+                    </div>
                 </div>
             </div>
         </div>
