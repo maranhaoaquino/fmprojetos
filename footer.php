@@ -3,7 +3,7 @@
         <!-- FORMULARIO DE CONTATO -->
             <section class="container">
                 <div class="row">
-                    <div class="col-12 col-sm-12- col-md-4">
+                    <div class="col-12 col-sm-12- col-md-4 d-flex justify-content-center align-items-center flex-wrap">
                         <div class="logo">
                             <a href="<?php echo get_home_url(); ?>">
                                 <?php
@@ -19,30 +19,33 @@
                             </a>
                         </div>
                     </div>
-                    <div class="col-12 col-sm-12- col-md-4">
-                        <?php $contatos = get_page_by_title('contatos')->ID; ?>
-                        <?php if(!empty(get_field_cmb2('email', $contatos))){ ?>
-                            <h4><?php the_field_cmb2('email', $contatos); ?></h4>
-                        <?php } ?>
-                        <?php if(!empty(get_field_cmb2('telefone', $contatos))){ ?>
-                            <h4><?php the_field_cmb2('telefone', $contatos); ?></h4>
-                        <?php } ?>                      
-                        <ul class="lista-icones">
-                            <?php if(!empty(get_field_cmb2('instagram', $contatos))){ ?>
-                            <li>
-                                <a href="<?php the_field_cmb2('instagram', $contatos); ?>" target="_blank">
-                                    <i class="fa fa-instagram" aria-hidden="true"></i>
-                                </a>
-                            </li>
+                    <div class="col-12 col-sm-12- col-md-4 d-flex justify-content-center align-items-center flex-wrap">
+                        <div>
+
+                            <?php $contatos = get_page_by_title('contatos')->ID; ?>
+                            <?php if(!empty(get_field_cmb2('email', $contatos))){ ?>
+                                <h4><?php the_field_cmb2('email', $contatos); ?></h4>
                             <?php } ?>
-                            <?php if(!empty(get_field_cmb2('instagram', $contatos))){ ?>
-                            <li>
-                                <a href="<?php the_field_cmb2('facebook', $contatos); ?>" target="_blank">
-                                    <i class="fa fa-facebook-official" aria-hidden="true"></i>
-                                </a>
-                            </li>
-                            <?php } ?>
-                        </ul>
+                            <?php if(!empty(get_field_cmb2('telefone', $contatos))){ ?>
+                                <h4><?php the_field_cmb2('telefone', $contatos); ?></h4>
+                            <?php } ?>                      
+                            <ul class="lista-icones">
+                                <?php if(!empty(get_field_cmb2('instagram', $contatos))){ ?>
+                                <li>
+                                    <a href="<?php the_field_cmb2('instagram', $contatos); ?>" target="_blank">
+                                        <i class="fa fa-instagram" aria-hidden="true"></i>
+                                    </a>
+                                </li>
+                                <?php } ?>
+                                <?php if(!empty(get_field_cmb2('instagram', $contatos))){ ?>
+                                <li>
+                                    <a href="<?php the_field_cmb2('facebook', $contatos); ?>" target="_blank">
+                                        <i class="fa fa-facebook-official" aria-hidden="true"></i>
+                                    </a>
+                                </li>
+                                <?php } ?>
+                            </ul>
+                        </div>
                     </div>
                     <div class="col-12 col-sm-12- col-md-4">
                         <div class="row mt-3 mb-3 text-center">
@@ -66,38 +69,12 @@
                                 <textarea name="mensagem" id="textAreaCustom" class="w-100"  required></textarea>      
                             </div> 
                             <div class="w-100 mt-2">
-                                <button type="submit"  class="btn-enviar w-100">Enviar</button>
+                                <button type="submit"  class="btn btn-secondary w-100">Enviar</button>
                             </div>                    
                         </form>                       
                     </div>
                 </div>
-            </section>            
-            <section class="container">
-                <div class="row mt-3">
-                    <div class="col-6 d-flex justify-content-start">
-                        &copy;Todos os direitos Reservados
-                    </div>
-                    <div class="col-6 d-flex justify-content-end">
-                        <ul class="lista-icones">
-                            <?php $contatos = get_page_by_title('contatos')->ID; ?>
-                            <?php if(!empty(get_field_cmb2('instagram', $contatos))){ ?>
-                            <li>
-                                <a href="<?php the_field_cmb2('instagram', $contatos); ?>" target="_blank">
-                                    <i class="fa fa-instagram" aria-hidden="true"></i>
-                                </a>
-                            </li>
-                            <?php } ?>
-                            <?php if(!empty(get_field_cmb2('instagram', $contatos))){ ?>
-                            <li>
-                                <a href="<?php the_field_cmb2('facebook', $contatos); ?>" target="_blank">
-                                    <i class="fa fa-facebook-official" aria-hidden="true"></i>
-                                </a>
-                            </li>
-                            <?php } ?>
-                        </ul>
-                    </div>
-                </div>
-            </section>        
+            </section>                  
     </footer>
     <?php
 		$whatsapp = str_replace('(', '', get_field_cmb2('whatsapp', $contatos));

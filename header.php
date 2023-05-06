@@ -32,7 +32,7 @@
                                 $custom_logo_id = get_theme_mod( 'custom_logo' );
                                 $logo = wp_get_attachment_image_src( $custom_logo_id , 'full' );
                                 if ( has_custom_logo() ) {
-                                    echo '<img src="' . esc_url( $logo[0] ) . '" alt="' . get_bloginfo( 'name' ) . '">';
+                                    echo '<img src="'   . esc_url( $logo[0] ) . '" alt="' . get_bloginfo( 'name' ) . '" class="img-logo ">';
                                 } else {
                                     echo '<h1>' . get_bloginfo('name') . '</h1>';
                                 }
@@ -40,44 +40,42 @@
                         </a>
                     </div>
                 </div>
-                <div class="col-12 col-sm-9 d-flex align-items-center">
-                    <!-- NAVEGAÇÃO -->
-                    <div class="col-12">
-                        <h2 class="header-h2">O Melhor em Equipamentos para o seu Negocio.</h2>
-                    </div>
+                <div class="col-12 col-sm-9 d-flex align-items-center justify-content-center">
+                    <!-- NAVEGAÇÃO -->                    
+                        <h2 class="header-h2">O Melhor em Equipamentos para o seu Negocio.</h2>                    
                 </div>
             </div>
             <div class="container" id="header-filho">
-                <nav id="nav-list">
-                    <?php $parceiros = get_page_by_title('Nossos Parceiros')->ID; ?>
-                    <?php $marca_parceiro = get_field_cmb2('marca_parceiro', $parceiros); 
-                        if(!empty($marca_parceiro)) {
-                    ?>
-                        <ul class="nav nav-tabs">
-                            <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Parceiros</a>
-                                <div class="dropdown-menu">
-                                    <?php foreach($marca_parceiro as $slide) { ?>
-                                        <?php if(!empty($slide['nome_parceiro'])){?>
-                                            <a class="dropdown-item" <?php if(!empty($slide['link_parceiro'])){?>href="<?php echo $slide['link_parceiro'] ?>"<?php } else { ?>href="#"<?php } ?>>
-                                                <?php if(!empty($slide['nome_parceiro'])){?><?php echo $slide['nome_parceiro'] ?><?php } ?>
-                                            </a>
+                    <nav id="nav-list">
+                        <?php $parceiros = get_page_by_title('Nossos Parceiros')->ID; ?>
+                        <?php $marca_parceiro = get_field_cmb2('marca_parceiro', $parceiros); 
+                            if(!empty($marca_parceiro)) {
+                        ?>
+                            <ul class="nav nav-tabs">
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" onclick="changeDNone()" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Parceiros</a>
+                                    <div class="dropdown-menu">
+                                        <?php foreach($marca_parceiro as $slide) { ?>
+                                            <?php if(!empty($slide['nome_parceiro'])){?>
+                                                <a class="dropdown-item" <?php if(!empty($slide['link_parceiro'])){?>href="<?php echo $slide['link_parceiro'] ?>"<?php } else { ?>href="#"<?php } ?>>
+                                                    <?php if(!empty($slide['nome_parceiro'])){?><?php echo $slide['nome_parceiro'] ?><?php } ?>
+                                                </a>
+                                            <?php } ?>
                                         <?php } ?>
-                                    <?php } ?>
-                                </div>
-                            </li>
-                        </ul>
-                    <?php } ?>
-
-                    <?php
-                        $args = array(
-                            'menu' => 'principal',
-                            'theme_location' => 'menu-principal',
-                            'container' => false
-                        );
-                        wp_nav_menu( $args );
-                    ?>
-                </nav>
+                                    </div>
+                                </li>
+                            </ul>
+                        <?php } ?>
+    
+                        <?php
+                            $args = array(
+                                'menu' => 'principal',
+                                'theme_location' => 'menu-principal',
+                                'container' => false
+                            );
+                            wp_nav_menu( $args );
+                        ?>
+                    </nav>
             </div>
         </div>
     </header>
@@ -130,5 +128,13 @@
         </div>
     </header>
     <script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/js/script.js"></script>
+    <script type="text/javascript">
+        let dropdownMenu = document.querySelector(".dropdown-menu")
+        function changeDNone() {
+            console.log("Teste");
+            dropdownMenu.style.display == "" ? dropdownMenu.style.display = "block" : dropdownMenu.style.display = "";
+  
+        }
+    </script>
 
     
