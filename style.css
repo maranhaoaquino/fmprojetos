@@ -26,7 +26,7 @@ a {
 }
 /* HEADER */
 header {        
-    background: #35363A;    
+    background: #051561;    
 }
 .logo a{
     color: #fff;
@@ -50,7 +50,6 @@ header {
     box-sizing: border-box;
     list-style-type: none;
     display: flex;
-    
     font-size: 18px;
 }
 
@@ -700,12 +699,12 @@ textarea {
 }
 
 .item a {
-    color: #35363A;
+    color: #051561;
     text-decoration: none;
 }
 
 .item a:visited {
-    color: #35363A;
+    color: #051561;
     text-decoration: none;
 }
 
@@ -721,12 +720,12 @@ textarea {
 
 .remove-text-decoration {
     text-decoration: none;
-    color: #35363A;
+    color: #051561;
 }
 
 .remove-text-decoration:visited {
     text-decoration: none;
-    color: #35363A;
+    color: #051561;
 }
 
 .img-parceiro {
