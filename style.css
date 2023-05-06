@@ -42,13 +42,13 @@ header {
     text-decoration: underline;
 }
 
-#navegacao-pai {
+#header-pai {
     position: relative;
 }
 
-#navegacao-filho {
+#header-filho {
     position:absolute;
-    top: 95%;
+    top: 115px;
     background: #fff;
     color: #051561;
     padding: 20px;
@@ -62,6 +62,9 @@ header {
 
 #nav-list {
     width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 8px;
 }
 
 
