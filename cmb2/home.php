@@ -13,6 +13,36 @@ function cmb2_fields_home() {
       ], // modelo de página
     ]);
 
+    $cmb->add_field([
+      'name' => 'Titulo Acima do Menu',
+      'id' => 'title-header',
+      'type' => 'text',
+    ]);
+
+    $cmb->add_field([
+      'name' => 'Titulo Sessão Parceiros',
+      'id' => 'title-parceiros',
+      'type' => 'text',
+    ]);
+
+    $cmb->add_field([
+      'name' => 'Subtitulo Sessão Parceiros',
+      'id' => 'subtitle-parceiros',
+      'type' => 'text',
+    ]);
+
+    $cmb->add_field([
+      'name' => 'Titulo Sessão Produtos',
+      'id' => 'title-produtos',
+      'type' => 'text',
+    ]);
+
+    $cmb->add_field([
+      'name' => 'Subtitulo Sessão Produtos',
+      'id' => 'subtitle-produtos',
+      'type' => 'text',
+    ]);
+
     $slide_principal = $cmb->add_field([
       'name' => 'Slide',
       'id' => 'slide_principal',

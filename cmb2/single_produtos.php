@@ -43,6 +43,27 @@ function cmb2_fields_single_produtos() {
     'id' => 'descricao_adicional',
     'type' => 'text_medium',
   ]);
+
+  $fotos_equipamentos = $cmb->add_field([
+    'name' => 'Fotos dos Equipamentos',
+    'id' => 'fotos_equipamentos',
+    'type' => 'group',
+    'repeatable' => true,
+    'options' => [
+      'sortable' => true,
+      'add_button' => 'Adicionar',
+      'remove_button' => 'Remover',
+    ],
+  ]);
+
+  $cmb->add_group_field($fotos_equipamentos, [
+    'name' => 'Foto',      
+    'id' => 'foto_equipamento',
+    'type' => 'file',
+    'options' => [
+      'url' => false,
+    ],
+  ]);
 }
 
 ?>

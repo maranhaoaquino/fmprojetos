@@ -41,8 +41,8 @@
                     </div>
                 </div>
                 <div class="col-12 col-sm-9 d-flex align-items-center justify-content-center">
-                    <!-- NAVEGAÇÃO -->                    
-                        <h2 class="header-h2">O Melhor em Equipamentos para o seu Negocio.</h2>                    
+                    <?php $home = get_page_by_title('home')->ID; ?>                 
+                    <h2 class="header-h2"><?php if (!empty(get_field_cmb2('title-header',$home))) { ?><?php the_field_cmb2('title-header',$home); ?><?php }else{ ?>O Melhor em Equipamentos para o seu Negocio.<?php } ?></h2>                    
                 </div>
             </div>
             <div class="container" id="header-filho">
