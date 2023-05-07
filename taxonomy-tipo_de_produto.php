@@ -9,16 +9,18 @@ $term = get_term_by( 'slug', get_query_var( 'term' ), get_query_var( 'taxonomy' 
   <main>
     <div id="slide-principal" class="owl-carousel owl-theme">
       <?php if ( have_posts() ): while ( have_posts() ): the_post(); ?>
-        <?php foreach($fotos_equipamentos as $slide) { ?>
-          <?php if(!empty($slide['foto_equipamento'])) { ?>
-            <div class="item">
-              <a href="<?php the_permalink(); ?>">
-                <img src="<?php echo $slide['foto_equipamento'] ?>">
-                  <div id="grid-slider">
-                    <h2><?php the_title();?></h2>
-                  </div>
-              </a>
-            </div>
+        <?php $fotos_equipamentos = get_field_cmb2('fotos_equipamentos'); if(!empty($fotos_equipamentos)) { ?>
+          <?php foreach($fotos_equipamentos as $slide) { ?>
+            <?php if(!empty($slide['foto_equipamento'])) { ?>
+              <div class="item">
+                <a href="<?php the_permalink(); ?>">
+                  <img src="<?php echo $slide['foto_equipamento'] ?>">
+                    <div id="grid-slider">
+                      <h2><?php the_title();?></h2>
+                    </div>
+                </a>
+              </div>
+            <?php } ?>
           <?php } ?>
         <?php } ?>
       <?php endwhile; ?>
