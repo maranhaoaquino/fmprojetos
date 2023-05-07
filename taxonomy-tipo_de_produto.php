@@ -35,6 +35,7 @@ $term = get_term_by( 'slug', get_query_var( 'term' ), get_query_var( 'taxonomy' 
         ],
       });
     </script>
+    <?php endif; ?>
     <section class="container mt-5">
       <div class="row text-center">
         <h2 class="archive-title"><?php echo apply_filters( 'the_title', $term->name ); ?></h2>
