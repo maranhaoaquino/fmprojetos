@@ -4,8 +4,24 @@
 <?php get_header(); ?>
 <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
     <main>
+    <?php $fotos_equipamentos = get_field_cmb2('fotos_equipamentos'); if(!empty($fotos_equipamentos)) { ?>            
+            <section class="container-fluid">
+                <div class="row">
+                    <div id="slide-principal" class="owl-carousel owl-theme">
+                        <?php foreach($fotos_equipamentos as $slide) { ?>
+                            <?php if(!empty($slide['foto_equipamento'])){?>
+                                <div class="item">
+                                    <img src="<?php echo $slide['foto_equipamento'] ?>">
+                                    
+                                </div>
+                            <?php } ?>
+                        <?php } ?>
+                    </div>
+                </div>          
+            </section>
+        <?php } ?>
         <section class="container mt-5">
-            <div class="row justify-content-center text-center ">
+            <div class="row justify-content-center text-center">
                 <div class="col-12 col-sm-6">
                     <div class="border-img">
                         <img  src="<?php the_field_cmb2('imagem_principal_produto') ?>" width="100%" >
@@ -39,30 +55,10 @@
                 </div>
             </section>
         <?php } ?>
-        <?php $fotos_equipamentos = get_field_cmb2('fotos_equipamentos'); if(!empty($fotos_equipamentos)) { ?>
-            <section class="container mt-5">
-                <div class="row justify-content-center text-center mt-3">
-                        <h3>Fotos dos Equipamentos</h3>
-                </div>
-            </section>
-            <section class="container mt-5">
-                <div class="row">
-                    <div id="slide-fotos" class="owl-carousel owl-theme carrossel--home">
-                        <?php foreach($fotos_equipamentos as $slide) { ?>
-                            <?php if(!empty($slide['foto_equipamento'])){?>
-                                <div class="item">
-                                    <img src="<?php echo $slide['foto_equipamento'] ?>">
-                                    
-                                </div>
-                            <?php } ?>
-                        <?php } ?>
-                    </div>
-                </div>          
-            </section>
-        <?php } ?>
+        
     </main>
     <script>
-        $('.carrossel--home').owlCarousel({
+        $('#slide-principal').owlCarousel({
             loop:false,
             nav:true,
             dots: true,
@@ -70,20 +66,7 @@
                 "<i class='fa fa-chevron-left'></i>",
                 "<i class='fa fa-chevron-right'></i>"
             ],
-            responsive:{
-                0:{
-                    items: 3,
-                    margin: 10
-                },
-                711:{
-                    items: 4,
-                    margin: 20
-                },
-                1023:{
-                    items: 6,
-                    margin: 30
-                }
-            }
+            items: 1            
         });
     </script>
 <?php endwhile; endif; ?>

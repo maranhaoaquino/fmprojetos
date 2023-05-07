@@ -65,6 +65,7 @@ header {
     color: #051561;
     padding: 20px;
     z-index: 2;
+    box-shadow: 2px 6px 12px rgba(0, 0, 0, 0.5);
 }
 
 
@@ -220,8 +221,22 @@ header {
 }*/
 
 .card {
-    min-height: 620px !important;
+    /* min-height: 620px !important; */
+    position: relative;
 }
+
+.card-body {
+    position: absolute;
+    top: 30%;
+    display: none !important;    
+}
+
+/* .card-body:hover, .card-body:active {
+    display: block !important;
+} */
+
+
+
 
 
 .card-produto .card-header {
@@ -496,18 +511,9 @@ header {
     margin: 100px 0px;    
 }
 
-.map {
-    border: 1px solid #e6e6e6;
-    border-radius: 24px 0 0 24px;
-    box-shadow: 5px 2px 11px #dbdbdb;
-    z-index: 1;
-}
 
-.map iframe {
-    border-radius: 24px 0 0 24px;
-    width: 600px;
-    height: 450px;
-}
+
+
 .contatos {    
     padding: 30px;
     background: #e6e6e6;
@@ -517,7 +523,7 @@ header {
 }
 
 .contatos:hover {
-    box-shadow: 2px 2px 20px #222;
+    box-shadow: 2px 6px 12px rgba(0, 0, 0, 0.5);;
 }
 
 
@@ -732,7 +738,7 @@ textarea {
     transition: 500ms ease-in-out
 }
 .card:hover {
-    box-shadow: 2px 2px 20px #222;
+    box-shadow: 2px 6px 12px rgba(0, 0, 0, 0.5);
     cursor: pointer;
 }
 
@@ -879,8 +885,11 @@ textarea {
 /* //UTILITIES */
 /*29/04/2023*/
 .border-img {
-    box-shadow: 2px 4px 12px #bbb;
+    box-shadow: 2px 6px 12px rgba(0, 0, 0, 0.5);
     border-radius: 6px;
 }
 
+.margin-top-custom {
+    margin-top: 100px !important;
+}
 
