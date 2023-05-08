@@ -15,7 +15,7 @@
                                         echo '<h1>' . get_bloginfo('name') . '</h1>';
                                     }
                                 ?>
-                                <h3><?php echo get_bloginfo('name'); ?></h3>
+                                <h3 class="text-center"><?php echo get_bloginfo('name'); ?></h3>
                             </a>
                         </div>
                     </div>
