@@ -53,7 +53,7 @@
                         ?>
                             <ul class="nav nav-tabs">
                                 <li class="nav-item dropdown">
-                                    <a class="nav-link dropdown-togge" onclick="changeDNone()" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Parceiros</a>
+                                    <a class="nav-link dropdown-togge" onclick="changeDNone()" data-toggle="dropdown" href="javascript:void(0)" role="button" aria-haspopup="true" aria-expanded="false">Parceiros</a>
                                     <div class="dropdown-menu">
                                         <?php foreach($marca_parceiro as $slide) { ?>
                                             <?php if(!empty($slide['nome_parceiro'])){?>
@@ -121,7 +121,7 @@
                         ?>
                             <ul class="nav nav-tabs">
                                 <li class="nav-item dropdown">
-                                    <a class="nav-link dropdown-togge" onclick="changeDNone()" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Parceiros</a>
+                                    <a class="nav-link dropdown-togge" onclick="changeDNone()" data-toggle="dropdown" href="javascript:void(0)" role="button" aria-haspopup="true" aria-expanded="false">Parceiros</a>
                                     <div class="dropdown-menu">
                                         <?php foreach($marca_parceiro as $slide) { ?>
                                             <?php if(!empty($slide['nome_parceiro'])){?>
