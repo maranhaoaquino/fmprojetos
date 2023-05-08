@@ -14,7 +14,7 @@ $term = get_term_by( 'slug', get_query_var( 'term' ), get_query_var( 'taxonomy' 
             <?php if(!empty($slide['foto_equipamento'])) { ?>
               <div class="item">
                 <a href="<?php the_permalink(); ?>">
-                  <img src="<?php echo $slide['foto_equipamento'] ?>">
+                  <img class="img-slides" src="<?php echo $slide['foto_equipamento'] ?>">
                     <div id="grid-slider">
                       <h2><?php the_title();?></h2>
                     </div>

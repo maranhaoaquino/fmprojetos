@@ -795,7 +795,10 @@ textarea {
     text-align: center;
 }
 
-
+.img-slides {
+    height: 583px;
+    object-fit: cover;
+}
 
 /*RESPONSIVE*/ 
 @media (max-width: 768px) {
@@ -887,6 +890,15 @@ textarea {
         height: 200px;
         object-fit: cover;
     }
+    
+    .img-slides {
+        object-fit: cover;
+        height: 300px;
+    }
+
+    .titulo-home {
+        font-size: 32px;
+    }
 
     
 }
@@ -901,4 +913,5 @@ textarea {
 .margin-top-custom {
     margin-top: 100px !important;
 }
+
 

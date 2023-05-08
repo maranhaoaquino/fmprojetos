@@ -3,7 +3,7 @@
 ?>
 <?php get_header(); ?>
 <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-    <main>
+    <main class="margin-top-custom">
         <section class="container mt-5 text-center">
             <h2><?php echo the_title('' )?></h2>
         </section>

@@ -13,7 +13,7 @@
                     <?php if(!empty($slide['img_slide'])) { ?>
                         <div class="item">
                             <a href="<?php if(!empty($slide['link_slide'])) { ?><?php echo $slide['link_slide'] ?><?php } ?>">
-                                <img src="<?php echo $slide['img_slide'] ?>">
+                                <img class="img-slides" src="<?php echo $slide['img_slide'] ?>">
                                 <div id="grid-slider">
                                     <?php if(!empty($slide['title_slide'])) { ?><h2><?php echo $slide['title_slide'] ?></h2><?php } ?>
                                     <?php if(!empty($slide['subtitle_slide'])) { ?><p><?php echo $slide['subtitle_slide'] ?></p><?php } ?>

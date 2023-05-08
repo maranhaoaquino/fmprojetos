@@ -5,22 +5,21 @@
 <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
     <main>
     <?php $fotos_equipamentos = get_field_cmb2('fotos_equipamentos'); if(!empty($fotos_equipamentos)) { ?>            
-            <section class="container-fluid">
-                <div class="row">
+            
+                
                     <div id="slide-principal" class="owl-carousel owl-theme">
                         <?php foreach($fotos_equipamentos as $slide) { ?>
                             <?php if(!empty($slide['foto_equipamento'])){?>
                                 <div class="item">
-                                    <img src="<?php echo $slide['foto_equipamento'] ?>">
+                                    <img class="img-slides" src="<?php echo $slide['foto_equipamento'] ?>">
                                     
                                 </div>
                             <?php } ?>
                         <?php } ?>
-                    </div>
-                </div>          
-            </section>
+                    </div>                
+            
         <?php } ?>
-        <section class="container mt-5">
+        <section class="container margin-top-custom">
             <div class="row justify-content-center text-center">
                 <div class="col-12 col-sm-6">
                     <div class="border-img">
