@@ -44,7 +44,7 @@
                 <div class="container mt-5">
                     <div class="row text-center">
                         <h2 class="titulo-home"><?php if (!empty(get_field_cmb2('title-parceiros'))) { ?><?php the_field_cmb2('title-parceiros'); ?><?php }else{ ?>Nossos <span class="bold-titulo">Parceiros</span><?php } ?></h2>
-                        <?php if (!empty(get_field_cmb2('subtitle-parceiros'))) { ?><p class="titulo-home"><?php the_field_cmb2('subtitle-parceiros'); ?></p><?php } ?>
+                        <?php if (!empty(get_field_cmb2('subtitle-parceiros'))) { ?><p><?php the_field_cmb2('subtitle-parceiros'); ?></p><?php } ?>
                     </div>
                     <div class="row mt-3">
                         <div id="slide-parceiros" class="owl-carousel owl-theme carrossel--home">
@@ -65,8 +65,8 @@
             <!-- PRODUTOS -->
             <div class="container mt-5">
                 <div class="row text-center">
-                    <h2 class="titulo-home"><?php if (!empty(get_field_cmb2('title-produtos'))) { ?><?php the_field_cmb2('title-produtos'); ?><?php }else{ ?>OFERECEMOS O QUE HA DE MELHOR EM EQUIPAMENTOS TECNOLOGIA DESIGNE DURABILIDADE E PREÇO.<?php } ?></h2>
-                    <p><?php if (!empty(get_field_cmb2('subtitle-produtos'))) { ?><?php the_field_cmb2('title-produtos'); ?><?php }else{ ?>A FM Projetos, é uma empresa que atua na area de projetos e representação, e tem como a finalidade, levar o que ha de melhor em equipamentos e instalações para os seus clientes, para isso, reunimos os melhores fabricantes de Equipamentos para o setor de Varejo.<?php } ?></p>
+                    <h2 class="titulo-home"><?php if (!empty(get_field_cmb2('title-produtos'))) { ?><?php the_field_cmb2('title-produtos'); ?><?php }else{ ?>OFERECEMOS O QUE HA DE MELHOR EM EQUIPAMENTOS. TECNOLOGIA, DESIGN, DURABILIDADE E PREÇO.<?php } ?></h2>
+                    <p><?php if (!empty(get_field_cmb2('subtitle-produtos'))) { ?><?php the_field_cmb2('subtitle-produtos'); ?><?php }else{ ?>A FM Projetos, é uma empresa que atua na area de projetos e representação, e tem como a finalidade, levar o que ha de melhor em equipamentos e instalações para os seus clientes, para isso, reunimos os melhores fabricantes de Equipamentos para o setor de Varejo.<?php } ?></p>
                 </div>
                 <!-- ESPAÇO PARA OS CARD DOS PRODUTOS -->
                 <div class="row mt-3 gy-4">

@@ -21,7 +21,7 @@
 </head>
 <body>
     <!-- CABEÇALHO PC-->
-    <header class="d-none d-md-block">
+    <header id="header-desktop" class="d-none d-md-block">
         <div class="container">
             <div class="row pt-3 pb-3" id="header-pai">
                 <div class="col-12 col-sm-3 d-flex align-items-center">
@@ -53,7 +53,7 @@
                         ?>
                             <ul class="nav nav-tabs">
                                 <li class="nav-item dropdown">
-                                    <a class="nav-link dropdown-togge" onclick="changeDNone()" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Parceiros</a>
+                                    <a class="nav-link dropdown-togge" onclick="changeDNone()" data-toggle="dropdown" href="javascript:void(0)" role="button" aria-haspopup="true" aria-expanded="false">Parceiros</a>
                                     <div class="dropdown-menu">
                                         <?php foreach($marca_parceiro as $slide) { ?>
                                             <?php if(!empty($slide['nome_parceiro'])){?>
@@ -114,7 +114,26 @@
                     </nav>
                     
                 </div>
-                <div class="col-12 collapse" id="navbarToggleExternalContent3">                
+                <div class="col-12 collapse" id="navbarToggleExternalContent3">
+                        <?php $parceiros = get_page_by_title('Nossos Parceiros')->ID; ?>
+                        <?php $marca_parceiro = get_field_cmb2('marca_parceiro', $parceiros); 
+                            if(!empty($marca_parceiro)) {
+                        ?>
+                            <ul class="nav nav-tabs">
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-togge" onclick="changeDNone()" data-toggle="dropdown" href="javascript:void(0)" role="button" aria-haspopup="true" aria-expanded="false">Parceiros</a>
+                                    <div class="dropdown-menu">
+                                        <?php foreach($marca_parceiro as $slide) { ?>
+                                            <?php if(!empty($slide['nome_parceiro'])){?>
+                                                <a class="dropdown-item" <?php if(!empty($slide['link_parceiro'])){?>href="<?php echo $slide['link_parceiro'] ?>"<?php } else { ?>href="#"<?php } ?>>
+                                                    <?php if(!empty($slide['nome_parceiro'])){?><?php echo $slide['nome_parceiro'] ?><?php } ?>
+                                                </a>
+                                            <?php } ?>
+                                        <?php } ?>
+                                    </div>
+                                </li>
+                            </ul>
+                        <?php } ?>                
                         <?php
                             $args = array(
                                 'menu' => 'principal',
