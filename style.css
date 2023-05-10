@@ -1,7 +1,7 @@
 /*
 Nome do Tema: FMProjetos
 URI do tema: http://luketa.me/
-Autor: Lucas Maranhao
+Autor: Lucas Maranhao e William dos Santos Ferreira
 URI do autor: http://luketa.me/
 Descrição: Tema para a FM Projetos e Instalações.
 Versão: 1.0
@@ -844,6 +844,7 @@ textarea {
         display: flex;
         flex-direction: column;
         align-items: center;
+        padding-left: 2rem;
     }
 
     #navbarToggleExternalContent3 ul li{

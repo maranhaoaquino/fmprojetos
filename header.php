@@ -130,10 +130,8 @@
     <script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/js/script.js"></script>
     <script type="text/javascript">
         let dropdownMenu = document.querySelector(".dropdown-menu")
-        function changeDNone() {
-            console.log("Teste");
+        function changeDNone() {            
             dropdownMenu.style.display == "" ? dropdownMenu.style.display = "block" : dropdownMenu.style.display = "";
-  
         }
     </script>
 
