@@ -119,10 +119,10 @@
                         <?php $marca_parceiro = get_field_cmb2('marca_parceiro', $parceiros); 
                             if(!empty($marca_parceiro)) {
                         ?>
-                            <ul class="nav nav-tabs">
+                            <ul class="nav nav-tabs" id="no-border">
                                 <li class="nav-item dropdown">
-                                    <a class="nav-link dropdown-togge" onclick="changeDNone()" data-toggle="dropdown" href="javascript:void(0)" role="button" aria-haspopup="true" aria-expanded="false">Parceiros</a>
-                                    <div class="dropdown-menu">
+                                    <a class="nav-link dropdown-togge" onclick="changeDNoneResponsive()"  data-toggle="dropdown" href="javascript:void(0)" role="button" aria-haspopup="true" aria-expanded="false">Parceiros</a>
+                                    <div class="dropdown-menu" id="responsive-list">
                                         <?php foreach($marca_parceiro as $slide) { ?>
                                             <?php if(!empty($slide['nome_parceiro'])){?>
                                                 <a class="dropdown-item" <?php if(!empty($slide['link_parceiro'])){?>href="<?php echo $slide['link_parceiro'] ?>"<?php } else { ?>href="#"<?php } ?>>
@@ -148,10 +148,19 @@
     </header>
     <script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/js/script.js"></script>
     <script type="text/javascript">
-        let dropdownMenu = document.querySelector(".dropdown-menu")
+        let dropdownMenu = document.querySelector(".dropdown-menu");
+        let dropdownMenuResponsive = document.querySelector("#responsive-list");        
         function changeDNone() {            
-            dropdownMenu.style.display == "" ? dropdownMenu.style.display = "block" : dropdownMenu.style.display = "";
-        }
+            dropdownMenu.style.display == "" ? dropdownMenu.style.display = "block" : dropdownMenu.style.display = "";            
+        }   
+        function changeDNoneResponsive() {            
+            dropdownMenuResponsive.style.display == "" ? dropdownMenuResponsive.style.display = "block" : dropdownMenuResponsive.style.display = "";
+            if (dropdownMenuResponsive.style.display == "block") {
+                dropdownMenuResponsive.style.backgroundColor = "#051561";
+                dropdownMenuResponsive.style.position = "relative";
+                dropdownMenuResponsive.style.left = "39px";                
+            }
+        }     
     </script>
 
     

@@ -775,6 +775,10 @@ textarea {
     
 }
 
+#no-border {
+    border: none;
+}
+
 .img-project img {
     height: 100%;
 }
