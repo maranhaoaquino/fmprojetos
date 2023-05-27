@@ -1,7 +1,32 @@
-
+<?php $parceiros = get_page_by_title('Nossos Parceiros')->ID; ?>
+            <?php $marca_parceiro = get_field_cmb2('marca_parceiro', $parceiros); 
+                if(!empty($marca_parceiro)) {
+            ?>
+                <div class="container mt-5">
+                    <div class="row text-center">
+                        <h2 class="titulo-home"><?php if (!empty(get_field_cmb2('title-parceiros'))) { ?><?php the_field_cmb2('title-parceiros'); ?><?php }else{ ?>Nossos <span class="bold-titulo">Parceiros</span><?php } ?></h2>
+                        <?php if (!empty(get_field_cmb2('subtitle-parceiros'))) { ?><p><?php the_field_cmb2('subtitle-parceiros'); ?></p><?php } ?>
+                    </div>
+                    <div class="row mt-3">
+                        <div class="owl-carousel owl-theme carrossel--footer">
+                            <?php foreach($marca_parceiro as $slide) { ?>
+                                <?php if(!empty($slide['logo_parceiro'])){?>
+                                    <div class="item" id="parceiros-hover">
+                                        <a <?php if(!empty($slide['link_parceiro'])){?>href="<?php echo $slide['link_parceiro'] ?>"<?php } else { ?>href="#"<?php } ?> >
+                                            <img src="<?php echo $slide['logo_parceiro'] ?>" >
+                                            <?php if(!empty($slide['nome_parceiro'])){?><h3 class="text-center"><?php echo $slide['nome_parceiro'] ?></h3><?php } ?>
+                                        </a>
+                                    </div>
+                                <?php } ?>
+                            <?php } ?>
+                        </div>
+                    </div>
+                </div>
+            <?php } ?>
     <footer class="mt-5">
         <!-- FORMULARIO DE CONTATO -->
             <section class="container">
+                
                 <div class="row">
                     <div class="col-12 col-sm-12- col-md-4 d-flex justify-content-center align-items-center flex-wrap">
                         <div class="logo">
@@ -51,7 +76,7 @@
                         <div class="row mt-3 mb-3 text-center">
                             <h4>FALE COM UM ESPECIALISTA</h4>
                         </div>
-                        <form id="contato-email" action="<?php echo get_template_directory_uri(); ?>/enviar.php" class="d-flex flex-column align-items-center" method="POST">
+                        <form id="contato-email" action="<?php echo get_template_directory_uri(); ?>/enviar.php" class="d-flex flex-column align-items-center form-footer mb-5" method="POST">
                             <div class="w-100 d-flex flex-column">
                                 <label class="label-form" for="nome">Nome: </label>                        
                                 <input type="text" name="nome" id="nome" placeholder="Seu Nome" class="input-type-a" required>
@@ -89,5 +114,30 @@
     <?php } ?>
     
     <?php wp_footer(); ?>
+    <script>
+        $('.carrossel--footer').owlCarousel({
+            loop:false,
+            nav:true,
+            dots: true,
+            navText: [
+                "<i class='fa fa-chevron-left'></i>",
+                "<i class='fa fa-chevron-right'></i>"
+            ],
+            responsive:{
+                0:{
+                    items: 3,
+                    margin: 10
+                },
+                711:{
+                    items: 4,
+                    margin: 20
+                },
+                1023:{
+                    items: 6,
+                    margin: 30
+                }
+            }
+        });
+    </script>
 </body>
 </html>

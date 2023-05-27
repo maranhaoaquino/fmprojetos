@@ -47,13 +47,13 @@
                         <?php if (!empty(get_field_cmb2('subtitle-parceiros'))) { ?><p><?php the_field_cmb2('subtitle-parceiros'); ?></p><?php } ?>
                     </div>
                     <div class="row mt-3">
-                        <div id="slide-parceiros" class="owl-carousel owl-theme carrossel--home">
+                        <div  class="owl-carousel owl-theme carrossel--home">
                             <?php foreach($marca_parceiro as $slide) { ?>
                                 <?php if(!empty($slide['logo_parceiro'])){?>
-                                    <div class="item">
-                                        <a <?php if(!empty($slide['link_parceiro'])){?>href="<?php echo $slide['link_parceiro'] ?>"<?php } else { ?>href="#"<?php } ?>>
-                                            <img src="<?php echo $slide['logo_parceiro'] ?>">
-                                            <?php if(!empty($slide['nome_parceiro'])){?><h3><?php echo $slide['nome_parceiro'] ?></h3><?php } ?>
+                                    <div class="item" id="parceiros-hover">
+                                        <a <?php if(!empty($slide['link_parceiro'])){?>href="<?php echo $slide['link_parceiro'] ?>"<?php } else { ?>href="#"<?php } ?> >
+                                            <img src="<?php echo $slide['logo_parceiro'] ?>" >
+                                            <?php if(!empty($slide['nome_parceiro'])){?><h3 class="text-center"><?php echo $slide['nome_parceiro'] ?></h3><?php } ?>
                                         </a>
                                     </div>
                                 <?php } ?>
@@ -94,7 +94,7 @@
                             Veja nossos Produtos
                         </a>
                     </div>
-                </div>
+                </div>                
             </div>     
         </main>
     <?php endwhile; endif; ?>

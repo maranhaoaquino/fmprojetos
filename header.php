@@ -46,6 +46,7 @@
                 </div>
             </div>
             <div class="container" id="header-filho">
+                <div class="row justify-content-center">
                     <nav id="nav-list">
                         <?php $parceiros = get_page_by_title('Nossos Parceiros')->ID; ?>
                         <?php $marca_parceiro = get_field_cmb2('marca_parceiro', $parceiros); 
@@ -60,7 +61,7 @@
                                                 <a class="dropdown-item" <?php if(!empty($slide['link_parceiro'])){?>href="<?php echo $slide['link_parceiro'] ?>"<?php } else { ?>href="#"<?php } ?>>
                                                     <?php if(!empty($slide['nome_parceiro'])){?><?php echo $slide['nome_parceiro'] ?><?php } ?>
                                                 </a>
-                                            <?php } ?>
+                                            <?php }?>
                                         <?php } ?>
                                     </div>
                                 </li>
@@ -76,6 +77,7 @@
                             wp_nav_menu( $args );
                         ?>                        
                     </nav>
+                </div>
             </div>
         </div>
     </header>

@@ -29,7 +29,7 @@ header {
     background: #051561;
 }
 #header-desktop{
-    height: 200px;
+    height: 152px;
 }
 .logo a{
     color: #fff;
@@ -37,7 +37,7 @@ header {
 }
 
 .img-logo {
-    height: 125px;
+    width: 100px;
 }
 
 .header-h2 {
@@ -62,26 +62,52 @@ header {
 
 #header-filho {
     position:absolute;
-    top: 185px;
+    top: 135    px;
+    right: 214px;
+    height: 54px;
     background: #fff;
     color: #051561;
     padding: 20px;
     z-index: 2;
     box-shadow: 2px 6px 12px rgba(0, 0, 0, 0.5);
 }
-
+/* #header-filho {
+    *USAR ESTE*
+    position: absolute;
+    top: 135px;
+    background: #fff;
+    color: #051561;
+    padding: 20px;
+    z-index: 2;
+    box-shadow: 2px 6px 12px rgba(0, 0, 0, 0.5);
+    width: 797px;
+    right: 214px;
+    height: 53px;
+} */
 
 .logo a h1{
     font-size: 48px;
 }
 
 #nav-list {
-    width: 100%;
-    display: flex;
+    position: relative;
+    display: inline-flex;
     align-items: center;
-    gap: 8px;
+    bottom: 19px;
     justify-content: center;
 }
+
+/* #nav-list {
+    *USAR ESTE*
+    
+    position: relative;
+    bottom: 20px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+} */
+
+
 
 
 #nav-list ul {
@@ -102,7 +128,7 @@ header {
 }
 
 #menu-principal li:hover {
-    border-bottom: 2px solid #051561;
+    font-weight: 900;
 }
 
 
@@ -116,6 +142,10 @@ header {
 #nav-list ul li a:hover {    
     color: #000;
     /* text-decoration: underline; */
+}
+
+.dropdown-item:hover {
+    font-weight: 900 !important;
 }
 
 /*RESPONSIVE HEADER*/
@@ -534,9 +564,22 @@ header {
 }
 
 .contatos:hover {
-    box-shadow: 2px 6px 12px rgba(0, 0, 0, 0.5);;
+    box-shadow: 2px 6px 12px rgba(0, 0, 0, 0.5);
 }
 
+#parceiros-hover:hover {
+    box-shadow: 2px 1px 10px rgba(0, 0, 0, 0.2)
+}
+
+.form-footer {
+    background: #ccc;
+    padding: 10px;
+    border-radius: 24px;
+}
+
+.form-footer:hover {
+    box-shadow: 2px 1px 10px #ccc;
+}
 
 .input-effect {    
     display: flex;
@@ -650,11 +693,16 @@ footer {
     padding: 7px;
     background: #e6e6e6;
     font-size: 14px;
+    height: 20px;
+    box-shadow: 2px 6px 12px rgba(0, 0, 0, 0.5);
+    outline: 0;
 }
 
 .form-div-b {
     display: flex;
     justify-content: inherit;
+    box-shadow: 2px 6px 12px rgba(0, 0, 0, 0.5);
+    outline: 0;
 }
 
 textarea {
@@ -662,6 +710,8 @@ textarea {
     border: none;        
     background: #e6e6e6;
     width: 100%;
+    box-shadow: 2px 6px 12px rgba(0, 0, 0, 0.5);
+    outline: 0;
 }
 
 .form-div-btn {
@@ -686,7 +736,8 @@ textarea {
 }
 
 .label-form {
-    font-size: 14px
+    font-size: 14px;
+    color: #051561;
 }
 
 #slide-principal {
