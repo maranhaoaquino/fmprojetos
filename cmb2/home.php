@@ -60,6 +60,11 @@ function cmb2_fields_home() {
       'type' => 'file',
     ]);
     $cmb->add_group_field($slide_principal, [
+      'name' => 'Link do video',
+      'id' => 'video_link',
+      'type' => 'text_url',
+    ]);
+    $cmb->add_group_field($slide_principal, [
       'name' => 'Titulo',
       'id' => 'title_slide',
       'type' => 'text',
