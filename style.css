@@ -62,8 +62,7 @@ header {
 
 #header-filho {
     position:absolute;
-    top: 135px;
-    height: 54px;
+    top: 154px;
     background: #fff;
     color: #051561;
     padding: 20px;
@@ -92,7 +91,6 @@ header {
     position: relative;
     display: inline-flex;
     align-items: center;
-    bottom: 19px;
     justify-content: center;
 }
 
